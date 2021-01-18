@@ -12,7 +12,7 @@ struct HeritageTreeMapView: View {
 
     var body: some View {
         Map(coordinateRegion: $region, annotationItems: [viewModel]) { _ in
-            MapAnnotation(coordinate: viewModel.coordinate!) {
+            MapAnnotation(coordinate: coordinate) {
                 HeritageTreeMapAnnotationContent()
             }
         }

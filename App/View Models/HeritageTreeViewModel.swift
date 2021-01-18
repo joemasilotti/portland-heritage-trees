@@ -12,6 +12,7 @@ struct HeritageTreeViewModel: Identifiable {
     var notes: String? { tree.properties.notes }
     var height: String? { "\(tree.properties.height) ft" }
     var treeFact: String? { tree.properties.treeFactLong }
+    var mappableViewModel: MappableHeritageTreeViewModel? { MappableHeritageTreeViewModel(tree: tree) }
 
     var spread: String? {
         guard let spread = tree.properties.spread else { return nil }
@@ -26,11 +27,6 @@ struct HeritageTreeViewModel: Identifiable {
     var circumference: String? {
         guard let circumference = tree.properties.circumf else { return nil }
         return "\(circumference) in"
-    }
-
-    var coordinate: CLLocationCoordinate2D? {
-        guard let latitude = tree.properties.lat, let longitude = tree.properties.lon else { return nil }
-        return CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
     }
 
     var wikipediaURL: URL? {
