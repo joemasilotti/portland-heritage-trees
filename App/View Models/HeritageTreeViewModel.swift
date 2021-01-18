@@ -33,3 +33,11 @@ struct HeritageTreeViewModel: Identifiable {
         WikipediaURL.search(querying: commonName)
     }
 }
+
+// MARK: Preview Content
+
+extension HeritageTreeViewModel {
+    static var preview: Self {
+        Self(tree: HeritageTree.preview)
+    }
+}

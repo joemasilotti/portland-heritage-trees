@@ -28,7 +28,6 @@
 		841CB24F25B5205500D0B283 /* HeritageTreeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CB24E25B5205500D0B283 /* HeritageTreeViewModel.swift */; };
 		8447ADDB25B54C630045D247 /* HeritageTreeMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447ADDA25B54C630045D247 /* HeritageTreeMapView.swift */; };
 		8447ADDF25B557FC0045D247 /* HeritageTreeDimensionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447ADDE25B557FC0045D247 /* HeritageTreeDimensionsView.swift */; };
-		8447ADE225B558580045D247 /* HeritageTreeViewModelPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447ADE125B558580045D247 /* HeritageTreeViewModelPreview.swift */; };
 		8447ADE525B560E80045D247 /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447ADE425B560E80045D247 /* SafariView.swift */; };
 		8447ADE825B561610045D247 /* HeritageTreeNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447ADE725B561610045D247 /* HeritageTreeNameView.swift */; };
 		8447ADEC25B565610045D247 /* WikipediaURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447ADEB25B565610045D247 /* WikipediaURL.swift */; };
@@ -37,7 +36,6 @@
 		8447ADF825B5E6FD0045D247 /* MappableHeritageTreeListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447ADF725B5E6FD0045D247 /* MappableHeritageTreeListViewModel.swift */; };
 		8447ADFD25B6365A0045D247 /* HeritageTreeMapAnnotationContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447ADFC25B6365A0045D247 /* HeritageTreeMapAnnotationContent.swift */; };
 		8447AE0125B63FCC0045D247 /* MappableHeritageTreeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447AE0025B63FCC0045D247 /* MappableHeritageTreeViewModel.swift */; };
-		848F453B25B541A40069715C /* HeritageTreePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848F453725B5418E0069715C /* HeritageTreePreview.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,7 +62,6 @@
 		841CB24E25B5205500D0B283 /* HeritageTreeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeritageTreeViewModel.swift; sourceTree = "<group>"; };
 		8447ADDA25B54C630045D247 /* HeritageTreeMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeritageTreeMapView.swift; sourceTree = "<group>"; };
 		8447ADDE25B557FC0045D247 /* HeritageTreeDimensionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeritageTreeDimensionsView.swift; sourceTree = "<group>"; };
-		8447ADE125B558580045D247 /* HeritageTreeViewModelPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeritageTreeViewModelPreview.swift; sourceTree = "<group>"; };
 		8447ADE425B560E80045D247 /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
 		8447ADE725B561610045D247 /* HeritageTreeNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeritageTreeNameView.swift; sourceTree = "<group>"; };
 		8447ADEB25B565610045D247 /* WikipediaURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikipediaURL.swift; sourceTree = "<group>"; };
@@ -73,7 +70,6 @@
 		8447ADF725B5E6FD0045D247 /* MappableHeritageTreeListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MappableHeritageTreeListViewModel.swift; sourceTree = "<group>"; };
 		8447ADFC25B6365A0045D247 /* HeritageTreeMapAnnotationContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeritageTreeMapAnnotationContent.swift; sourceTree = "<group>"; };
 		8447AE0025B63FCC0045D247 /* MappableHeritageTreeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MappableHeritageTreeViewModel.swift; sourceTree = "<group>"; };
-		848F453725B5418E0069715C /* HeritageTreePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeritageTreePreview.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,9 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				841CB23825B50B7700D0B283 /* HeritageTrees.geojson */,
-				848F453725B5418E0069715C /* HeritageTreePreview.swift */,
 				841CB20225B4FF3E00D0B283 /* Preview Assets.xcassets */,
-				8447ADE125B558580045D247 /* HeritageTreeViewModelPreview.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -260,7 +254,6 @@
 				8447ADF825B5E6FD0045D247 /* MappableHeritageTreeListViewModel.swift in Sources */,
 				8447ADDF25B557FC0045D247 /* HeritageTreeDimensionsView.swift in Sources */,
 				8447ADF125B5E4EC0045D247 /* HeritageTreeMapListView.swift in Sources */,
-				848F453B25B541A40069715C /* HeritageTreePreview.swift in Sources */,
 				841CB22F25B50AA900D0B283 /* HeritageTree.swift in Sources */,
 				841CB22525B50A5000D0B283 /* OpenDataEndpoint.swift in Sources */,
 				841CB22225B50A3500D0B283 /* APISession.swift in Sources */,
@@ -268,7 +261,6 @@
 				8447ADFD25B6365A0045D247 /* HeritageTreeMapAnnotationContent.swift in Sources */,
 				841CB21425B5054F00D0B283 /* HeritageTreeListView.swift in Sources */,
 				841CB21925B5083E00D0B283 /* HeritageTreeListItem.swift in Sources */,
-				8447ADE225B558580045D247 /* HeritageTreeViewModelPreview.swift in Sources */,
 				8447ADE525B560E80045D247 /* SafariView.swift in Sources */,
 				841CB22C25B50A9600D0B283 /* HeritageTreeListAPIResponse.swift in Sources */,
 				8447ADF425B5E5F10045D247 /* CLLocationCoordinate2DPortland.swift in Sources */,
