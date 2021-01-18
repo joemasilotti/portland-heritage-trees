@@ -12,7 +12,9 @@ struct HeritageTreeMapView: View {
 
     var body: some View {
         Map(coordinateRegion: $region, annotationItems: [viewModel]) { _ in
-            MapPin(coordinate: viewModel.coordinate!)
+            MapAnnotation(coordinate: viewModel.coordinate!) {
+                HeritageTreeMapAnnotationContent()
+            }
         }
         .onAppear {
             region.center = coordinate
@@ -21,20 +23,9 @@ struct HeritageTreeMapView: View {
 }
 
 struct HeritageTreeMapView_Previews: PreviewProvider {
-    static let coordinate = CLLocationCoordinate2D(
-        latitude: 45.528942037138904,
-        longitude: -122.69795840197969
-    )
-
     static var previews: some View {
-        HeritageTreeMapView(coordinate: coordinate, viewModel: HeritageTreeViewModel.preview)
+        HeritageTreeMapView(coordinate: CLLocationCoordinate2D.northWestNeighborhood, viewModel: HeritageTreeViewModel.preview)
             .previewLayout(PreviewLayout.sizeThatFits)
             .padding()
-    }
-}
-
-private extension CLLocationCoordinate2D {
-    static var northWestNeighborhood: Self {
-        Self(latitude: 25.7617, longitude: -0.1275)
     }
 }

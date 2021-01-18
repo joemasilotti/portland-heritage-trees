@@ -2,9 +2,7 @@ import MapKit
 import SwiftUI
 
 struct HeritageTreeDetailView: View {
-    let tree: HeritageTree
-
-    private var viewModel: HeritageTreeViewModel { HeritageTreeViewModel(tree: tree) }
+    let viewModel: HeritageTreeViewModel
 
     var body: some View {
         VStack {
@@ -78,6 +76,6 @@ private struct AttributeRow: View {
 
 struct HeritageTreeDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        HeritageTreeDetailView(tree: HeritageTree.preview)
+        HeritageTreeDetailView(viewModel: HeritageTreeViewModel.preview)
     }
 }

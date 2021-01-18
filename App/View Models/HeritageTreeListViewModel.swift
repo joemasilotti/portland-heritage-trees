@@ -2,7 +2,7 @@ import Combine
 
 class HeritageTreeListViewModel: ObservableObject, OpenDataService {
     let apiSession: APIService
-    @Published var trees = [HeritageTree]()
+    @Published var treeViewModels = [HeritageTreeViewModel]()
 
     private var cancellables = Set<AnyCancellable>()
 
@@ -20,7 +20,8 @@ class HeritageTreeListViewModel: ObservableObject, OpenDataService {
                     break
                 }
             }) { result in
-                self.trees = result.features
+                self.treeViewModels = result.features
+                    .map({ HeritageTreeViewModel(tree: $0) })
             }
         cancellables.insert(cancellable)
     }
