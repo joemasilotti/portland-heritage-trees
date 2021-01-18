@@ -6,7 +6,7 @@ class HeritageTreeListViewModel: ObservableObject, OpenDataService {
 
     private var cancellables = Set<AnyCancellable>()
 
-    init(apiSession: APIService = APISession()) {
+    init(apiSession: APIService) {
         self.apiSession = apiSession
     }
 

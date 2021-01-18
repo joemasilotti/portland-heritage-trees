@@ -3,7 +3,7 @@ import SwiftUI
 struct HeritageTreeListView: View {
     @ObservedObject var viewModel: HeritageTreeListViewModel
 
-    init(environment: Environment = .remote) {
+    init(environment: Environment) {
         self.viewModel = HeritageTreeListViewModel(apiSession: environment.apiSession)
     }
 

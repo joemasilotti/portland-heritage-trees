@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		841CB1FC25B4FF3D00D0B283 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CB1FB25B4FF3D00D0B283 /* App.swift */; };
-		841CB1FE25B4FF3D00D0B283 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CB1FD25B4FF3D00D0B283 /* ContentView.swift */; };
 		841CB20025B4FF3E00D0B283 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 841CB1FF25B4FF3E00D0B283 /* Assets.xcassets */; };
 		841CB20325B4FF3E00D0B283 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 841CB20225B4FF3E00D0B283 /* Preview Assets.xcassets */; };
 		841CB20D25B4FFB900D0B283 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CB20C25B4FFB900D0B283 /* APIService.swift */; };
@@ -27,12 +26,12 @@
 		841CB24225B51E3400D0B283 /* LocalSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CB24125B51E3400D0B283 /* LocalSession.swift */; };
 		841CB24A25B51F8E00D0B283 /* HeritageTreeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CB24925B51F8E00D0B283 /* HeritageTreeDetailView.swift */; };
 		841CB24F25B5205500D0B283 /* HeritageTreePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CB24E25B5205500D0B283 /* HeritageTreePresenter.swift */; };
+		848F453B25B541A40069715C /* HeritageTreePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848F453725B5418E0069715C /* HeritageTreePreview.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		841CB1F825B4FF3D00D0B283 /* Heritage Trees.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Heritage Trees.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		841CB1FB25B4FF3D00D0B283 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
-		841CB1FD25B4FF3D00D0B283 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		841CB1FF25B4FF3E00D0B283 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		841CB20225B4FF3E00D0B283 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		841CB20425B4FF3E00D0B283 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -52,6 +51,7 @@
 		841CB24125B51E3400D0B283 /* LocalSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalSession.swift; sourceTree = "<group>"; };
 		841CB24925B51F8E00D0B283 /* HeritageTreeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeritageTreeDetailView.swift; sourceTree = "<group>"; };
 		841CB24E25B5205500D0B283 /* HeritageTreePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeritageTreePresenter.swift; sourceTree = "<group>"; };
+		848F453725B5418E0069715C /* HeritageTreePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeritageTreePreview.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				841CB23825B50B7700D0B283 /* HeritageTrees.geojson */,
+				848F453725B5418E0069715C /* HeritageTreePreview.swift */,
 				841CB20225B4FF3E00D0B283 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -109,7 +110,6 @@
 			isa = PBXGroup;
 			children = (
 				841CB1FB25B4FF3D00D0B283 /* App.swift */,
-				841CB1FD25B4FF3D00D0B283 /* ContentView.swift */,
 				841CB24925B51F8E00D0B283 /* HeritageTreeDetailView.swift */,
 				841CB21825B5083E00D0B283 /* HeritageTreeListItem.swift */,
 				841CB21325B5054F00D0B283 /* HeritageTreeListView.swift */,
@@ -229,9 +229,9 @@
 			files = (
 				841CB23225B50AC500D0B283 /* HeritageTreeListViewModel.swift in Sources */,
 				841CB24F25B5205500D0B283 /* HeritageTreePresenter.swift in Sources */,
-				841CB1FE25B4FF3D00D0B283 /* ContentView.swift in Sources */,
 				841CB22925B50A7E00D0B283 /* OpenDataService.swift in Sources */,
 				841CB23E25B51E0E00D0B283 /* Environment.swift in Sources */,
+				848F453B25B541A40069715C /* HeritageTreePreview.swift in Sources */,
 				841CB22F25B50AA900D0B283 /* HeritageTree.swift in Sources */,
 				841CB22525B50A5000D0B283 /* OpenDataEndpoint.swift in Sources */,
 				841CB22225B50A3500D0B283 /* APISession.swift in Sources */,

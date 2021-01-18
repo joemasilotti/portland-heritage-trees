@@ -4,7 +4,7 @@ import SwiftUI
 struct Portland_Heritage_TreesApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HeritageTreeListView(environment: .remote)
         }
     }
 }

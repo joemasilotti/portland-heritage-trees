@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "841CB1F725B4FF3D00D0B283"
-               BuildableName = "App.app"
+               BuildableName = "Heritage Trees.app"
                BlueprintName = "App"
                ReferencedContainer = "container:portland-heritage-trees.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "841CB1F725B4FF3D00D0B283"
-            BuildableName = "App.app"
+            BuildableName = "Heritage Trees.app"
             BlueprintName = "App"
             ReferencedContainer = "container:portland-heritage-trees.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "841CB1F725B4FF3D00D0B283"
-            BuildableName = "App.app"
+            BuildableName = "Heritage Trees.app"
             BlueprintName = "App"
             ReferencedContainer = "container:portland-heritage-trees.xcodeproj">
          </BuildableReference>

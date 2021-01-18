@@ -4,7 +4,6 @@ import Foundation
 struct LocalSession: APIService {
     func request<T>(with builder: RequestBuilder) -> AnyPublisher<T, APIError> where T: Decodable {
         let decoder = JSONDecoder()
-        decoder.keyDecodingStrategy = .convertFromSnakeCase
 
         if let path = Bundle.main.path(forResource: "HeritageTrees", ofType: "geojson") {
             do {

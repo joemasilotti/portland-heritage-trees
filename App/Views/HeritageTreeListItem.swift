@@ -3,10 +3,12 @@ import SwiftUI
 struct HeritageTreeListItem: View {
     let tree: HeritageTree
 
+    private var presenter: HeritageTreePresenter { HeritageTreePresenter(tree: tree) }
+
     var body: some View {
         HStack {
-            Text("\(tree.treeID)")
-            Text(tree.commonName)
+            Text(presenter.id)
+            Text(presenter.commonName)
         }
     }
 }
@@ -16,11 +18,5 @@ struct HeritageTreeListItem_Previews: PreviewProvider {
         HeritageTreeListItem(tree: HeritageTree.preview)
             .previewLayout(PreviewLayout.sizeThatFits)
             .padding()
-    }
-}
-
-extension HeritageTree {
-    static var preview: Self {
-        HeritageTree(commonName: "American elm", treeID: 1, scientificName: "Ulmus americana")
     }
 }

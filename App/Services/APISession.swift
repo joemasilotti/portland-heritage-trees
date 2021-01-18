@@ -4,7 +4,6 @@ import Foundation
 struct APISession: APIService {
     func request<T>(with builder: RequestBuilder) -> AnyPublisher<T, APIError> where T: Decodable {
         let decoder = JSONDecoder()
-        decoder.keyDecodingStrategy = .convertFromSnakeCase
 
         return URLSession.shared
             .dataTaskPublisher(for: builder.urlRequest)
