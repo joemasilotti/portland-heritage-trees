@@ -1,0 +1,259 @@
+{
+    "type": "FeatureCollection",
+    "name": "Heritage_Trees",
+    "crs": {
+        "type": "name",
+        "properties": {
+            "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+        }
+    },
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 1,
+                "TREEID": 1,
+                "STATUS": "Heritage",
+                "SCIENTIFIC": "Ulmus americana",
+                "COMMON": "American elm",
+                "STATE_ID": "1S1E04AA  6200",
+                "SITE_ADDRESS": "1111 SW 10th AVE",
+                "HEIGHT": 85,
+                "Date_Height": "2018/08/10 00:00:00+00",
+                "SPREAD": 107,
+                "Date_Spread": "2018/08/10 00:00:00+00",
+                "CIRCUMF": 12.8,
+                "Date_Circumference": "2018/08/10 00:00:00+00",
+                "DIAMETER": 48,
+                "YEAR_Designated": 1973,
+                "DATE_DESIG": "1973/01/01 00:00:00+00",
+                "Ownership": "Private",
+                "NOTES": "This tree was planted in front of the home of Martin and Rosetta Burrell in 1870 and is thus known as the 'Burrell Elm'.",
+                "LAT": 45.51672923,
+                "LON": -122.68401382,
+                "Delist_Date": "1970/01/01 00:00:00+00",
+                "Delist_Ordinance": null,
+                "Delist_Reason": null,
+                "Neighborhood": "DOWNTOWN",
+                "Vol_Inspection": "1970/01/01 00:00:00+00",
+                "Native": null,
+                "Site_Notes": null,
+                "Ordinance": null,
+                "County_Rec": null,
+                "Plaque_adjustment_date": "2018/08/10 00:00:00+00",
+                "Plaque_notes": null,
+                "Tree_fact_short": null,
+                "Tree_fact_long": "The Burrell Elm is the second historic tree recognized by the City of Portland. It is an American Elm tree that was planted in 1870 at the home of Martin and Rosetta Burrell, in what was their private garden at the time. As Portland grew, the character of the neighborhood changed from private single-family homes to denser development. This elm tree is now behind the sidewalk in front of the YWCA in downtown Portland.",
+                "Species_fact_short": null,
+                "Species_fact_long": null,
+                "Owner_name": null,
+                "Owner_address": null
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.684057969345531,
+                    45.516780049535349
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 2,
+                "TREEID": 2,
+                "STATUS": "Heritage",
+                "SCIENTIFIC": "Platanus x acerifolia",
+                "COMMON": "London planetree",
+                "STATE_ID": "1S1E04AA  2100",
+                "SITE_ADDRESS": "NW/C SW PARK & SW MAIN ST",
+                "HEIGHT": 63,
+                "Date_Height": "2018/08/10 00:00:00+00",
+                "SPREAD": 95,
+                "Date_Spread": "2018/08/10 00:00:00+00",
+                "CIRCUMF": 14.3,
+                "Date_Circumference": "2018/08/10 00:00:00+00",
+                "DIAMETER": 54,
+                "YEAR_Designated": 1975,
+                "DATE_DESIG": "1975/01/01 00:00:00+00",
+                "Ownership": "Right Of Way",
+                "NOTES": "This tree was planted beside the Sylvester Farrell house in 1880.",
+                "LAT": 45.51716693,
+                "LON": -122.68257458,
+                "Delist_Date": "1970/01/01 00:00:00+00",
+                "Delist_Ordinance": null,
+                "Delist_Reason": null,
+                "Neighborhood": "DOWNTOWN",
+                "Vol_Inspection": "1970/01/01 00:00:00+00",
+                "Native": null,
+                "Site_Notes": null,
+                "Ordinance": null,
+                "County_Rec": null,
+                "Plaque_adjustment_date": "2018/08/10 00:00:00+00",
+                "Plaque_notes": "New plaque 2018",
+                "Tree_fact_short": null,
+                "Tree_fact_long": "This London Planetree was planted by Sylvester Farrell in the planting strip in front of his house, as determined by historic photos of the home that show the newly planted tree. This tree has seen its surroundings change several times over the course of its life. Today, the lot is being used as a parking lot. London planetrees are notable for their resilience to the stressors of the urban environment and their longevity. This heritage tree may well see the land around it continue to change as the city continues to grow and develop.",
+                "Species_fact_short": null,
+                "Species_fact_long": null,
+                "Owner_name": null,
+                "Owner_address": null
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.682614709060601,
+                    45.517223483863937
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 3,
+                "TREEID": 3,
+                "STATUS": "Heritage",
+                "SCIENTIFIC": "Liriodendron tulipifera",
+                "COMMON": "Tulip tree",
+                "STATE_ID": "1N1E26DC  13500",
+                "SITE_ADDRESS": "1403 NE WEIDLER ST",
+                "HEIGHT": 74,
+                "Date_Height": "2018/09/05 00:00:00+00",
+                "SPREAD": 61,
+                "Date_Spread": "2018/09/05 00:00:00+00",
+                "CIRCUMF": 15.7,
+                "Date_Circumference": "2018/09/05 00:00:00+00",
+                "DIAMETER": 60,
+                "YEAR_Designated": 1993,
+                "DATE_DESIG": "1993/01/11 00:00:00+00",
+                "Ownership": "Private, Side Yard, Corner Lot",
+                "NOTES": "This tree is at the corner of NE 15th Ave and NE Weidler St, in an open patio area. It was planted near the George Nicolai home in the 1890s.",
+                "LAT": 45.53442499,
+                "LON": -122.65065872,
+                "Delist_Date": "1970/01/01 00:00:00+00",
+                "Delist_Ordinance": null,
+                "Delist_Reason": null,
+                "Neighborhood": "LLOYD DISTRICT",
+                "Vol_Inspection": "1970/01/01 00:00:00+00",
+                "Native": null,
+                "Site_Notes": null,
+                "Ordinance": null,
+                "County_Rec": null,
+                "Plaque_adjustment_date": "2018/09/05 00:00:00+00",
+                "Plaque_notes": null,
+                "Tree_fact_short": null,
+                "Tree_fact_long": "George Nicolai built a house on this lot for his new wife and planted the tulip tree after construction was completed, in the late 1880s. The use of this lot has changed over the decades since the tree was planted, resulting in some construction damage to the roots. However, this tree thrives along busy NE 15th Ave.",
+                "Species_fact_short": null,
+                "Species_fact_long": null,
+                "Owner_name": null,
+                "Owner_address": null
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.650672939702318,
+                    45.534430655425282
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 4,
+                "TREEID": 4,
+                "STATUS": "Heritage",
+                "SCIENTIFIC": "Quercus garryana",
+                "COMMON": "Oregon white oak",
+                "STATE_ID": "1S1E01CD  1600",
+                "SITE_ADDRESS": "2137 SE 32nd PL",
+                "HEIGHT": 45,
+                "Date_Height": "2018/08/24 00:00:00+00",
+                "SPREAD": 59,
+                "Date_Spread": "2018/08/24 00:00:00+00",
+                "CIRCUMF": 15.3,
+                "Date_Circumference": "2018/08/24 00:00:00+00",
+                "DIAMETER": 59,
+                "YEAR_Designated": 1993,
+                "DATE_DESIG": "1993/01/11 00:00:00+00",
+                "Ownership": "Private, Side Yard",
+                "NOTES": "This tree is known as the Picnic Oak and is on the west side of the lot between SE Lincoln St and SE Grant St.",
+                "LAT": 45.5073902,
+                "LON": -122.63184796,
+                "Delist_Date": "1970/01/01 00:00:00+00",
+                "Delist_Ordinance": null,
+                "Delist_Reason": null,
+                "Neighborhood": "RICHMOND",
+                "Vol_Inspection": "1970/01/01 00:00:00+00",
+                "Native": null,
+                "Site_Notes": null,
+                "Ordinance": null,
+                "County_Rec": null,
+                "Plaque_adjustment_date": "2018/08/24 00:00:00+00",
+                "Plaque_notes": null,
+                "Tree_fact_short": null,
+                "Tree_fact_long": null,
+                "Species_fact_short": null,
+                "Species_fact_long": null,
+                "Owner_name": null,
+                "Owner_address": null
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.631862170940451,
+                    45.507395867198099
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "OBJECTID": 5,
+                "TREEID": 5,
+                "STATUS": "Heritage",
+                "SCIENTIFIC": "Pinus nigra",
+                "COMMON": "Austrian pine",
+                "STATE_ID": "1S1E04BA 6800",
+                "SITE_ADDRESS": "COR JEFFERSON & SW 20TH",
+                "HEIGHT": 102,
+                "Date_Height": "2019/09/10 19:44:00+00",
+                "SPREAD": 58,
+                "Date_Spread": "2019/09/10 19:44:09+00",
+                "CIRCUMF": 10.6,
+                "Date_Circumference": "2019/09/10 19:44:14+00",
+                "DIAMETER": 39,
+                "YEAR_Designated": 1993,
+                "DATE_DESIG": "1993/01/11 00:00:00+00",
+                "Ownership": "Right Of Way (Trimet)",
+                "NOTES": "This tree is located in a built out planter at the intersection and is believed to have been planted sometime in the late 19th century by Henry Miller, one of Portland’s first florists.",
+                "LAT": 45.51798031,
+                "LON": -122.69459534000001,
+                "Delist_Date": "1970/01/01 00:00:00+00",
+                "Delist_Ordinance": null,
+                "Delist_Reason": null,
+                "Neighborhood": "GOOSE HOLLOW",
+                "Vol_Inspection": "1970/01/01 00:00:00+00",
+                "Native": null,
+                "Site_Notes": null,
+                "Ordinance": null,
+                "County_Rec": null,
+                "Plaque_adjustment_date": "2019/09/10 21:08:51+00",
+                "Plaque_notes": "Replaced nails with new hardware (screws, washers and springs)",
+                "Tree_fact_short": null,
+                "Tree_fact_long": null,
+                "Species_fact_short": null,
+                "Species_fact_long": null,
+                "Owner_name": null,
+                "Owner_address": null
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.694609565401436,
+                    45.517985969960407
+                ]
+            }
+        }
+    ]
+}
+
+
