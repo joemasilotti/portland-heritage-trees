@@ -10,22 +10,22 @@ struct HeritageTreeViewModel: Identifiable {
     var address: String? { tree.properties.siteAddress }
     var neighborhood: String? { tree.properties.neighborhood?.capitalized }
     var notes: String? { tree.properties.notes }
-    var height: String? { "\(tree.properties.height) feet" }
+    var height: String? { "\(tree.properties.height) ft" }
     var treeFact: String? { tree.properties.treeFactLong }
 
     var spread: String? {
         guard let spread = tree.properties.spread else { return nil }
-        return "\(spread) feet"
+        return "\(spread) ft"
     }
 
     var diameter: String? {
         guard let diameter = tree.properties.diameter else { return nil }
-        return "\(diameter) inches"
+        return "\(diameter) in"
     }
 
     var circumference: String? {
         guard let circumference = tree.properties.circumf else { return nil }
-        return "\(circumference) inches"
+        return "\(circumference) in"
     }
 
     var coordinate: CLLocationCoordinate2D? {

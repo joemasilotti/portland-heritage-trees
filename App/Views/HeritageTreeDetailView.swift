@@ -13,27 +13,49 @@ struct HeritageTreeDetailView: View {
                     .frame(height: 200)
             }
             List {
-                HeritageTreeAttributeRows(viewModel: viewModel)
+                NameRow(viewModel: viewModel)
+                    .padding(.vertical, 8)
+                LocationRow(viewModel: viewModel)
+                    .padding(.vertical, 8)
+                HeritageTreeDimensionsView(viewModel: viewModel)
+                    .padding(.vertical, 8)
+
+                AttributeRow(name: "Notes", value: viewModel.notes)
+                    .padding(.vertical, 8)
+                AttributeRow(name: "Tree fact", value: viewModel.treeFact)
+                    .padding(.vertical, 8)
             }
         }
         .navigationBarTitle(viewModel.uniqueName, displayMode: .inline)
     }
 }
 
-private struct HeritageTreeAttributeRows: View {
+private struct NameRow: View {
     let viewModel: HeritageTreeViewModel
 
     var body: some View {
-        AttributeRow(name: "Common name", value: viewModel.commonName)
-        AttributeRow(name: "Scientific name", value: viewModel.scientificName)
-        AttributeRow(name: "Address", value: viewModel.address)
-        AttributeRow(name: "Neighborhood", value: viewModel.neighborhood)
-        AttributeRow(name: "Height", value: viewModel.height)
-        AttributeRow(name: "Spread", value: viewModel.spread)
-        AttributeRow(name: "Circumference", value: viewModel.circumference)
-        AttributeRow(name: "Diameter", value: viewModel.diameter)
-        AttributeRow(name: "Notes", value: viewModel.notes)
-        AttributeRow(name: "Tree fact", value: viewModel.treeFact)
+        VStack(alignment: .leading) {
+            Text(viewModel.commonName)
+                .font(.title)
+            Text(viewModel.scientificName)
+                .font(.title3)
+                .foregroundColor(.gray)
+        }
+    }
+}
+
+private struct LocationRow: View {
+    let viewModel: HeritageTreeViewModel
+
+    var body: some View {
+        VStack(alignment: .leading) {
+            if let address = viewModel.address {
+                Text(address)
+            }
+            if let neighborhood = viewModel.neighborhood {
+                Text(neighborhood)
+            }
+        }
     }
 }
 
@@ -55,8 +77,6 @@ private struct AttributeRow: View {
 
 struct HeritageTreeDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView {
-            HeritageTreeDetailView(tree: HeritageTree.preview)
-        }
+        HeritageTreeDetailView(tree: HeritageTree.preview)
     }
 }

@@ -22,10 +22,9 @@ struct HeritageTreeMapView_Previews: PreviewProvider {
         latitude: 45.528942037138904,
         longitude: -122.69795840197969
     )
-    static let viewModel = HeritageTreeViewModel(tree: HeritageTree.preview)
 
     static var previews: some View {
-        HeritageTreeMapView(coordinate: coordinate, viewModel: viewModel)
+        HeritageTreeMapView(coordinate: coordinate, viewModel: HeritageTreeViewModel.preview)
             .previewLayout(PreviewLayout.sizeThatFits)
             .padding()
     }
