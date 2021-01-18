@@ -29,6 +29,9 @@
 		8447ADDB25B54C630045D247 /* HeritageTreeMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447ADDA25B54C630045D247 /* HeritageTreeMapView.swift */; };
 		8447ADDF25B557FC0045D247 /* HeritageTreeDimensionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447ADDE25B557FC0045D247 /* HeritageTreeDimensionsView.swift */; };
 		8447ADE225B558580045D247 /* HeritageTreeViewModelPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447ADE125B558580045D247 /* HeritageTreeViewModelPreview.swift */; };
+		8447ADE525B560E80045D247 /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447ADE425B560E80045D247 /* SafariView.swift */; };
+		8447ADE825B561610045D247 /* HeritageTreeNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447ADE725B561610045D247 /* HeritageTreeNameView.swift */; };
+		8447ADEC25B565610045D247 /* WikipediaURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447ADEB25B565610045D247 /* WikipediaURL.swift */; };
 		848F453B25B541A40069715C /* HeritageTreePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848F453725B5418E0069715C /* HeritageTreePreview.swift */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +60,9 @@
 		8447ADDA25B54C630045D247 /* HeritageTreeMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeritageTreeMapView.swift; sourceTree = "<group>"; };
 		8447ADDE25B557FC0045D247 /* HeritageTreeDimensionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeritageTreeDimensionsView.swift; sourceTree = "<group>"; };
 		8447ADE125B558580045D247 /* HeritageTreeViewModelPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeritageTreeViewModelPreview.swift; sourceTree = "<group>"; };
+		8447ADE425B560E80045D247 /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
+		8447ADE725B561610045D247 /* HeritageTreeNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeritageTreeNameView.swift; sourceTree = "<group>"; };
+		8447ADEB25B565610045D247 /* WikipediaURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikipediaURL.swift; sourceTree = "<group>"; };
 		848F453725B5418E0069715C /* HeritageTreePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeritageTreePreview.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -121,6 +127,8 @@
 				841CB21825B5083E00D0B283 /* HeritageTreeListItem.swift */,
 				841CB21325B5054F00D0B283 /* HeritageTreeListView.swift */,
 				8447ADDA25B54C630045D247 /* HeritageTreeMapView.swift */,
+				8447ADE725B561610045D247 /* HeritageTreeNameView.swift */,
+				8447ADE425B560E80045D247 /* SafariView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -154,6 +162,7 @@
 				841CB22B25B50A9600D0B283 /* HeritageTreeListAPIResponse.swift */,
 				841CB22425B50A5000D0B283 /* OpenDataEndpoint.swift */,
 				841CB21B25B50A1200D0B283 /* RequestBuilder.swift */,
+				8447ADEB25B565610045D247 /* WikipediaURL.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -238,15 +247,18 @@
 				841CB22F25B50AA900D0B283 /* HeritageTree.swift in Sources */,
 				841CB22525B50A5000D0B283 /* OpenDataEndpoint.swift in Sources */,
 				841CB22225B50A3500D0B283 /* APISession.swift in Sources */,
+				8447ADE825B561610045D247 /* HeritageTreeNameView.swift in Sources */,
 				841CB21425B5054F00D0B283 /* HeritageTreeListView.swift in Sources */,
 				841CB21925B5083E00D0B283 /* HeritageTreeListItem.swift in Sources */,
 				8447ADE225B558580045D247 /* HeritageTreeViewModelPreview.swift in Sources */,
+				8447ADE525B560E80045D247 /* SafariView.swift in Sources */,
 				841CB22C25B50A9600D0B283 /* HeritageTreeListAPIResponse.swift in Sources */,
 				841CB21C25B50A1200D0B283 /* RequestBuilder.swift in Sources */,
 				841CB20D25B4FFB900D0B283 /* APIService.swift in Sources */,
 				841CB1FC25B4FF3D00D0B283 /* App.swift in Sources */,
 				841CB21F25B50A1D00D0B283 /* APIError.swift in Sources */,
 				841CB24A25B51F8E00D0B283 /* HeritageTreeDetailView.swift in Sources */,
+				8447ADEC25B565610045D247 /* WikipediaURL.swift in Sources */,
 				841CB24225B51E3400D0B283 /* LocalSession.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

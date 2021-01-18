@@ -11,7 +11,6 @@ struct HeritageTreeMapView: View {
         Map(coordinateRegion: $region, annotationItems: [viewModel]) { _ in
             MapPin(coordinate: viewModel.coordinate!)
         }
-        .navigationTitle(viewModel.address ?? "")
         .onAppear {
             region.center = coordinate
         }

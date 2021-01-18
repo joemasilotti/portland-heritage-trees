@@ -13,7 +13,7 @@ struct HeritageTreeDetailView: View {
                     .frame(height: 200)
             }
             List {
-                NameRow(viewModel: viewModel)
+                HeritageTreeNameView(viewModel: viewModel)
                     .padding(.vertical, 8)
                 LocationRow(viewModel: viewModel)
                     .padding(.vertical, 8)
@@ -30,26 +30,12 @@ struct HeritageTreeDetailView: View {
     }
 }
 
-private struct NameRow: View {
-    let viewModel: HeritageTreeViewModel
-
-    var body: some View {
-        VStack(alignment: .leading) {
-            Text(viewModel.commonName)
-                .font(.title)
-            Text(viewModel.scientificName)
-                .font(.title3)
-                .foregroundColor(.gray)
-        }
-    }
-}
-
 private struct LocationRow: View {
     let viewModel: HeritageTreeViewModel
 
     var body: some View {
         if let coordinate = viewModel.coordinate {
-            NavigationLink(destination: HeritageTreeMapView(coordinate: coordinate, viewModel: viewModel)) {
+            NavigationLink(destination: mapView(coordinate: coordinate)) {
                 content
             }
         } else {
@@ -66,6 +52,11 @@ private struct LocationRow: View {
                 Text(neighborhood)
             }
         }
+    }
+
+    private func mapView(coordinate: CLLocationCoordinate2D) -> some View {
+        HeritageTreeMapView(coordinate: coordinate, viewModel: viewModel)
+            .navigationTitle(viewModel.address ?? "")
     }
 }
 

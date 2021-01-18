@@ -32,4 +32,8 @@ struct HeritageTreeViewModel: Identifiable {
         guard let latitude = tree.properties.lat, let longitude = tree.properties.lon else { return nil }
         return CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
     }
+
+    var wikipediaURL: URL? {
+        WikipediaURL.search(querying: commonName)
+    }
 }
