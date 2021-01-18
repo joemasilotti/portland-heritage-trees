@@ -48,6 +48,16 @@ private struct LocationRow: View {
     let viewModel: HeritageTreeViewModel
 
     var body: some View {
+        if let coordinate = viewModel.coordinate {
+            NavigationLink(destination: HeritageTreeMapView(coordinate: coordinate, viewModel: viewModel)) {
+                content
+            }
+        } else {
+            content
+        }
+    }
+
+    private var content: some View {
         VStack(alignment: .leading) {
             if let address = viewModel.address {
                 Text(address)

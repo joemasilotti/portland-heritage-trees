@@ -8,12 +8,13 @@ struct HeritageTreeMapView: View {
     @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 25.7617, longitude: -0.1275), span: MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005))
 
     var body: some View {
-        Map(coordinateRegion: $region, annotationItems: [viewModel]) { tree in
+        Map(coordinateRegion: $region, annotationItems: [viewModel]) { _ in
             MapPin(coordinate: viewModel.coordinate!)
         }
-            .onAppear {
-                region.center = coordinate
-            }
+        .navigationTitle(viewModel.address ?? "")
+        .onAppear {
+            region.center = coordinate
+        }
     }
 }
 
