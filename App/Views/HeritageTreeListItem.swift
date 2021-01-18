@@ -3,7 +3,7 @@ import SwiftUI
 struct HeritageTreeListItem: View {
     let tree: HeritageTree
 
-    private var presenter: HeritageTreePresenter { HeritageTreePresenter(tree: tree) }
+    private var presenter: HeritageTreeViewModel { HeritageTreeViewModel(tree: tree) }
 
     var body: some View {
         HStack {

@@ -1,4 +1,6 @@
-struct HeritageTreePresenter {
+import MapKit
+
+struct HeritageTreeViewModel: Identifiable {
     let tree: HeritageTree
 
     var id: String { String(tree.properties.treeID) }
@@ -24,5 +26,10 @@ struct HeritageTreePresenter {
     var circumference: String? {
         guard let circumference = tree.properties.circumf else { return nil }
         return "\(circumference) inches"
+    }
+
+    var coordinate: CLLocationCoordinate2D? {
+        guard let latitude = tree.properties.lat, let longitude = tree.properties.lon else { return nil }
+        return CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
     }
 }

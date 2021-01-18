@@ -19,8 +19,8 @@ struct HeritageTree: Codable, Identifiable {
         let diameter: Int?
         let yearDesignated: Int?
         let notes: String?
-        let lat: Float?
-        let lon: Float?
+        let lat: Double?
+        let lon: Double?
         let neighborhood: String?
         let treeFactLong: String?
 
