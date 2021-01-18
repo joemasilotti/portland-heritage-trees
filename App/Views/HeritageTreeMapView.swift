@@ -5,7 +5,10 @@ struct HeritageTreeMapView: View {
     let coordinate: CLLocationCoordinate2D
     let viewModel: HeritageTreeViewModel
 
-    @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 25.7617, longitude: -0.1275), span: MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005))
+    @State private var region = MKCoordinateRegion(
+        center: CLLocationCoordinate2D.northWestNeighborhood,
+        span: MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005)
+    )
 
     var body: some View {
         Map(coordinateRegion: $region, annotationItems: [viewModel]) { _ in
@@ -27,5 +30,11 @@ struct HeritageTreeMapView_Previews: PreviewProvider {
         HeritageTreeMapView(coordinate: coordinate, viewModel: HeritageTreeViewModel.preview)
             .previewLayout(PreviewLayout.sizeThatFits)
             .padding()
+    }
+}
+
+private extension CLLocationCoordinate2D {
+    static var northWestNeighborhood: Self {
+        Self(latitude: 25.7617, longitude: -0.1275)
     }
 }
