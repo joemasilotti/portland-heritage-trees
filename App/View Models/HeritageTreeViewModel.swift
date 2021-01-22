@@ -3,6 +3,8 @@ import MapKit
 class HeritageTreeViewModel: ObservableObject, Identifiable {
     let tree: HeritageTree
 
+    @Published var isVisited: Bool
+
     var id: String { String(tree.properties.treeID) }
     var uniqueName: String { "Tree #\(id)" }
     var commonName: String { tree.properties.common }
@@ -13,6 +15,8 @@ class HeritageTreeViewModel: ObservableObject, Identifiable {
     var height: String? { "\(tree.properties.height) ft" }
     var treeFact: String? { tree.properties.treeFactLong }
     var mappableViewModel: MappableHeritageTreeViewModel? { MappableHeritageTreeViewModel(tree: tree) }
+    var visitedButtonImageName: String { isVisited ? "checkmark.circle.fill" : "checkmark.circle" }
+    var visitedButtonText: String { isVisited ? "Visited" : "Mark as visited" }
 
     var spread: String? {
         guard let spread = tree.properties.spread else { return nil }
@@ -32,8 +36,6 @@ class HeritageTreeViewModel: ObservableObject, Identifiable {
     var wikipediaURL: URL? {
         WikipediaURL.search(querying: commonName)
     }
-
-    @Published var isVisited: Bool
 
     init(tree: HeritageTree) {
         self.tree = tree

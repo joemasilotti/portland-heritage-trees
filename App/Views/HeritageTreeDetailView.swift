@@ -5,37 +5,45 @@ struct HeritageTreeDetailView: View {
     @ObservedObject var viewModel: HeritageTreeViewModel
 
     var body: some View {
-        VStack {
-            if let coordinate = viewModel.mappableViewModel?.coordinate {
-                HeritageTreeMapView(coordinate: coordinate, viewModel: viewModel)
-                    .frame(height: 200)
-            }
-            List {
-                HeritageTreeNameView(viewModel: viewModel)
-                    .padding(.vertical, 8)
-                LocationRow(viewModel: viewModel)
-                    .padding(.vertical, 8)
-                HeritageTreeDimensionsView(viewModel: viewModel)
-                    .padding(.vertical, 8)
+        ZStack {
+            VStack {
+                if let coordinate = viewModel.mappableViewModel?.coordinate {
+                    HeritageTreeMapView(coordinate: coordinate, viewModel: viewModel)
+                        .frame(height: 200)
+                }
+                List {
+                    HeritageTreeNameView(viewModel: viewModel)
+                        .padding(.vertical, 8)
+                    LocationRow(viewModel: viewModel)
+                        .padding(.vertical, 8)
+                    HeritageTreeDimensionsView(viewModel: viewModel)
+                        .padding(.vertical, 8)
 
-                AttributeRow(name: "Notes", value: viewModel.notes)
-                    .padding(.vertical, 8)
-                AttributeRow(name: "Tree fact", value: viewModel.treeFact)
-                    .padding(.vertical, 8)
+                    AttributeRow(name: "Notes", value: viewModel.notes)
+                        .padding(.vertical, 8)
+                    AttributeRow(name: "Tree fact", value: viewModel.treeFact)
+                        .padding(.vertical, 8)
+                        .padding(.bottom, 64)
+                }
+            }
+            VStack {
+                Spacer()
+                toggleVisitedButton
             }
         }
         .navigationBarTitle(viewModel.uniqueName, displayMode: .inline)
-        .navigationBarItems(trailing: toggleVisitedButton)
     }
 
     private var toggleVisitedButton: some View {
         Button(action: { viewModel.toggleVisited() }) {
-            if viewModel.isVisited {
-                Image(systemName: "checkmark.circle.fill")
-            } else {
-                Image(systemName: "checkmark.circle")
-            }
+            Image(systemName: viewModel.visitedButtonImageName)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(height: 24)
+            Text(viewModel.visitedButtonText)
+                .bold()
         }
+        .buttonStyle(SolidButton())
     }
 }
 

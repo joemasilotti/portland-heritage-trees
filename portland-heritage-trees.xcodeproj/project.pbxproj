@@ -39,6 +39,7 @@
 		8447ADF825B5E6FD0045D247 /* MappableHeritageTreeListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447ADF725B5E6FD0045D247 /* MappableHeritageTreeListViewModel.swift */; };
 		8447ADFD25B6365A0045D247 /* HeritageTreeMapAnnotationContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447ADFC25B6365A0045D247 /* HeritageTreeMapAnnotationContent.swift */; };
 		8447AE0125B63FCC0045D247 /* MappableHeritageTreeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447AE0025B63FCC0045D247 /* MappableHeritageTreeViewModel.swift */; };
+		84BDFBD225BB5E9E00AAB247 /* SolidButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BDFBD125BB5E9E00AAB247 /* SolidButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +77,7 @@
 		8447ADF725B5E6FD0045D247 /* MappableHeritageTreeListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MappableHeritageTreeListViewModel.swift; sourceTree = "<group>"; };
 		8447ADFC25B6365A0045D247 /* HeritageTreeMapAnnotationContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeritageTreeMapAnnotationContent.swift; sourceTree = "<group>"; };
 		8447AE0025B63FCC0045D247 /* MappableHeritageTreeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MappableHeritageTreeViewModel.swift; sourceTree = "<group>"; };
+		84BDFBD125BB5E9E00AAB247 /* SolidButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolidButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 		841CB1FA25B4FF3D00D0B283 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				84BDFBD025BB5E9100AAB247 /* Styles */,
 				841CB20425B4FF3E00D0B283 /* Info.plist */,
 				841CB1FF25B4FF3E00D0B283 /* Assets.xcassets */,
 				843B284825BB1C7100032BAA /* Appearance */,
@@ -193,6 +196,14 @@
 			path = Appearance;
 			sourceTree = "<group>";
 		};
+		84BDFBD025BB5E9100AAB247 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				84BDFBD125BB5E9E00AAB247 /* SolidButton.swift */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -266,6 +277,7 @@
 				841CB23225B50AC500D0B283 /* HeritageTreeListViewModel.swift in Sources */,
 				841CB24F25B5205500D0B283 /* HeritageTreeViewModel.swift in Sources */,
 				841CB22925B50A7E00D0B283 /* OpenDataService.swift in Sources */,
+				84BDFBD225BB5E9E00AAB247 /* SolidButton.swift in Sources */,
 				841CB23E25B51E0E00D0B283 /* Environment.swift in Sources */,
 				8447ADDB25B54C630045D247 /* HeritageTreeMapView.swift in Sources */,
 				8447ADF825B5E6FD0045D247 /* MappableHeritageTreeListViewModel.swift in Sources */,
