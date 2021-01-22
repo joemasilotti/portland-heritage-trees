@@ -1,6 +1,6 @@
 import MapKit
 
-struct HeritageTreeViewModel: Identifiable {
+class HeritageTreeViewModel: ObservableObject, Identifiable {
     let tree: HeritageTree
 
     var id: String { String(tree.properties.treeID) }
@@ -32,12 +32,25 @@ struct HeritageTreeViewModel: Identifiable {
     var wikipediaURL: URL? {
         WikipediaURL.search(querying: commonName)
     }
+
+    @Published var isVisited: Bool
+
+    init(tree: HeritageTree) {
+        self.tree = tree
+        self.isVisited = Persistence.isTreeVisited(tree)
+    }
+
+    func toggleVisited() {
+        let isVisited = !Persistence.isTreeVisited(tree)
+        Persistence.setTree(tree, visited: isVisited)
+        self.isVisited = isVisited
+    }
 }
 
 // MARK: Preview Content
 
 extension HeritageTreeViewModel {
-    static var preview: Self {
-        Self(tree: HeritageTree.preview)
+    static var preview: HeritageTreeViewModel {
+        HeritageTreeViewModel(tree: HeritageTree.preview)
     }
 }

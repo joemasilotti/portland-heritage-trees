@@ -1,20 +1,20 @@
 import SwiftUI
 
 struct HeritageTreeListView: View {
-    var treeViewModels: [HeritageTreeViewModel]
+    @ObservedObject var viewModel: HeritageTreeListViewModel
 
     var body: some View {
-        List(treeViewModels) { viewModel in
-            NavigationLink(destination: HeritageTreeDetailView(viewModel: viewModel)) {
-                HeritageTreeListItem(viewModel: viewModel)
+        List(viewModel.treeViewModels.indices, id: \.self) { index in
+            NavigationLink(destination: HeritageTreeDetailView(viewModel: viewModel.treeViewModels[index])) {
+                HeritageTreeListItem(viewModel: viewModel.treeViewModels[index])
             }
         }
         .listStyle(PlainListStyle())
     }
 }
 
-struct HeritageTreeListView_Previews: PreviewProvider {
+ struct HeritageTreeListView_Previews: PreviewProvider {
     static var previews: some View {
-        HeritageTreeListView(treeViewModels: [HeritageTreeViewModel.preview])
+        HeritageTreeListView(viewModel: HeritageTreeListViewModel.preview)
     }
-}
+ }

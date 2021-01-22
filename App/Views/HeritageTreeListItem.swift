@@ -1,12 +1,18 @@
 import SwiftUI
 
 struct HeritageTreeListItem: View {
-    let viewModel: HeritageTreeViewModel
+    @ObservedObject var viewModel: HeritageTreeViewModel
 
     var body: some View {
         HStack {
             Text(viewModel.id)
             Text(viewModel.commonName)
+            Spacer()
+
+            if viewModel.isVisited {
+                Image(systemName: "checkmark.circle.fill")
+                    .foregroundColor(.gray)
+            }
         }
     }
 }

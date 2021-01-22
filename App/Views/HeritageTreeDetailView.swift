@@ -2,7 +2,7 @@ import MapKit
 import SwiftUI
 
 struct HeritageTreeDetailView: View {
-    let viewModel: HeritageTreeViewModel
+    @ObservedObject var viewModel: HeritageTreeViewModel
 
     var body: some View {
         VStack {
@@ -25,6 +25,17 @@ struct HeritageTreeDetailView: View {
             }
         }
         .navigationBarTitle(viewModel.uniqueName, displayMode: .inline)
+        .navigationBarItems(trailing: toggleVisitedButton)
+    }
+
+    private var toggleVisitedButton: some View {
+        Button(action: { viewModel.toggleVisited() }) {
+            if viewModel.isVisited {
+                Image(systemName: "checkmark.circle.fill")
+            } else {
+                Image(systemName: "checkmark.circle")
+            }
+        }
     }
 }
 

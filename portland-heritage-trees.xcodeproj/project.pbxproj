@@ -27,6 +27,7 @@
 		841CB24A25B51F8E00D0B283 /* HeritageTreeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CB24925B51F8E00D0B283 /* HeritageTreeDetailView.swift */; };
 		841CB24F25B5205500D0B283 /* HeritageTreeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CB24E25B5205500D0B283 /* HeritageTreeViewModel.swift */; };
 		843B283D25BA71A600032BAA /* HeritageTreeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B283C25BA71A600032BAA /* HeritageTreeListView.swift */; };
+		843B284125BA827200032BAA /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B284025BA827200032BAA /* Persistence.swift */; };
 		8447ADDB25B54C630045D247 /* HeritageTreeMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447ADDA25B54C630045D247 /* HeritageTreeMapView.swift */; };
 		8447ADDF25B557FC0045D247 /* HeritageTreeDimensionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447ADDE25B557FC0045D247 /* HeritageTreeDimensionsView.swift */; };
 		8447ADE525B560E80045D247 /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447ADE425B560E80045D247 /* SafariView.swift */; };
@@ -62,6 +63,7 @@
 		841CB24925B51F8E00D0B283 /* HeritageTreeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeritageTreeDetailView.swift; sourceTree = "<group>"; };
 		841CB24E25B5205500D0B283 /* HeritageTreeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeritageTreeViewModel.swift; sourceTree = "<group>"; };
 		843B283C25BA71A600032BAA /* HeritageTreeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeritageTreeListView.swift; sourceTree = "<group>"; };
+		843B284025BA827200032BAA /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		8447ADDA25B54C630045D247 /* HeritageTreeMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeritageTreeMapView.swift; sourceTree = "<group>"; };
 		8447ADDE25B557FC0045D247 /* HeritageTreeDimensionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeritageTreeDimensionsView.swift; sourceTree = "<group>"; };
 		8447ADE425B560E80045D247 /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 				841CB22E25B50AA800D0B283 /* HeritageTree.swift */,
 				841CB22B25B50A9600D0B283 /* HeritageTreeListAPIResponse.swift */,
 				841CB22425B50A5000D0B283 /* OpenDataEndpoint.swift */,
+				843B284025BA827200032BAA /* Persistence.swift */,
 				841CB21B25B50A1200D0B283 /* RequestBuilder.swift */,
 				8447ADEB25B565610045D247 /* WikipediaURL.swift */,
 			);
@@ -266,6 +269,7 @@
 				841CB21925B5083E00D0B283 /* HeritageTreeListItem.swift in Sources */,
 				8447ADE525B560E80045D247 /* SafariView.swift in Sources */,
 				841CB22C25B50A9600D0B283 /* HeritageTreeListAPIResponse.swift in Sources */,
+				843B284125BA827200032BAA /* Persistence.swift in Sources */,
 				8447ADF425B5E5F10045D247 /* CLLocationCoordinate2DPortland.swift in Sources */,
 				841CB21C25B50A1200D0B283 /* RequestBuilder.swift in Sources */,
 				8447AE0125B63FCC0045D247 /* MappableHeritageTreeViewModel.swift in Sources */,

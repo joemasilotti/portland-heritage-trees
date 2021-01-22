@@ -16,7 +16,7 @@ struct HomeView: View {
                     mapView
                         .navigationBarItems(trailing: listButton)
                 } else {
-                    HeritageTreeListView(treeViewModels: viewModel.treeViewModels)
+                    HeritageTreeListView(viewModel: viewModel)
                         .navigationBarItems(trailing: mapButton)
                 }
             }

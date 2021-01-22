@@ -26,3 +26,11 @@ class HeritageTreeListViewModel: ObservableObject, OpenDataService {
             .store(in: &cancellables)
     }
 }
+
+// MARK: Preview Content
+
+extension HeritageTreeListViewModel {
+    static var preview: HeritageTreeListViewModel {
+        HeritageTreeListViewModel(apiSession: Environment.local.apiSession)
+    }
+}
