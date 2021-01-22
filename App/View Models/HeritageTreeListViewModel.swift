@@ -11,7 +11,7 @@ class HeritageTreeListViewModel: ObservableObject, OpenDataService {
     }
 
     func getHeritageTrees() {
-        let cancellable = getHeritageTrees()
+        getHeritageTrees()
             .sink(receiveCompletion: { result in
                 switch result {
                 case .failure(let error):
@@ -21,8 +21,8 @@ class HeritageTreeListViewModel: ObservableObject, OpenDataService {
                 }
             }) { result in
                 self.treeViewModels = result.features
-                    .map({ HeritageTreeViewModel(tree: $0) })
+                    .map { HeritageTreeViewModel(tree: $0) }
             }
-        cancellables.insert(cancellable)
+            .store(in: &cancellables)
     }
 }
