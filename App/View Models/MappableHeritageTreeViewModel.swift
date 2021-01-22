@@ -1,6 +1,6 @@
 import MapKit
 
-struct MappableHeritageTreeViewModel: Identifiable {
+class MappableHeritageTreeViewModel: ObservableObject, Identifiable {
     var id: String { String(tree.properties.treeID) }
     let coordinate: CLLocationCoordinate2D
     var heritageTreeViewModel: HeritageTreeViewModel { HeritageTreeViewModel(tree: tree) }

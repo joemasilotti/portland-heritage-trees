@@ -2,7 +2,9 @@ import MapKit
 import SwiftUI
 
 struct HeritageTreeMapListView: View {
-    let viewModel: MappableHeritageTreeListViewModel
+    @ObservedObject var viewModel: MappableHeritageTreeListViewModel
+    @Binding var isShowing: Bool
+    @Binding var selectedTreeViewModel: HeritageTreeViewModel?
 
     @State private var region = MKCoordinateRegion(
         center: CLLocationCoordinate2D.northWestNeighborhood,
@@ -10,14 +12,26 @@ struct HeritageTreeMapListView: View {
     )
 
     var body: some View {
-        Map(coordinateRegion: $region, interactionModes: .all, showsUserLocation: true, userTrackingMode: nil, annotationItems: viewModel.treeViewModels) { viewModel in
-            MapAnnotation(coordinate: viewModel.coordinate) {
-                NavigationLink(destination: HeritageTreeDetailView(viewModel: viewModel.heritageTreeViewModel)) {
+        NavigationView {
+            Map(coordinateRegion: $region, annotationItems: viewModel.treeViewModels) { viewModel in
+                MapAnnotation(coordinate: viewModel.coordinate) {
                     HeritageTreeMapAnnotationContent()
+                        .onTapGesture {
+                            isShowing = false
+                            selectedTreeViewModel = viewModel.heritageTreeViewModel
+                        }
                 }
             }
+            .ignoresSafeArea(.all)
+            .navigationBarTitle("Heritage Trees", displayMode: .inline)
+            .navigationBarItems(trailing: dismissButton)
         }
-        .edgesIgnoringSafeArea(.all)
+    }
+
+    private var dismissButton: some View {
+        Button(action: { isShowing = false }) {
+            Text("Done")
+        }
     }
 }
 
@@ -27,6 +41,10 @@ struct HeritageTreeMapListView_Previews: PreviewProvider {
     )
 
     static var previews: some View {
-        HeritageTreeMapListView(viewModel: viewModel)
+        HeritageTreeMapListView(
+            viewModel: viewModel,
+            isShowing: .constant(true),
+            selectedTreeViewModel: .constant(nil)
+        )
     }
 }

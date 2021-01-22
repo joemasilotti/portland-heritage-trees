@@ -1,7 +1,9 @@
 import MapKit
+import Combine
 
-struct MappableHeritageTreeListViewModel {
-    let treeViewModels: [MappableHeritageTreeViewModel]
+class MappableHeritageTreeListViewModel: ObservableObject {
+    @Published var treeViewModels: [MappableHeritageTreeViewModel]
+
     var region: MKCoordinateRegion {
         MKCoordinateRegion(
             center: CLLocationCoordinate2D(latitude: 45.517905, longitude: -122.629721),

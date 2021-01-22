@@ -4,6 +4,7 @@ struct HomeView: View {
     @ObservedObject var viewModel: HeritageTreeListViewModel
 
     @State private var showingMap = false
+    @State private var selectedTreeViewModel: HeritageTreeViewModel?
 
     init(environment: Environment) {
         self.viewModel = HeritageTreeListViewModel(apiSession: environment.apiSession)
@@ -11,19 +12,31 @@ struct HomeView: View {
 
     var body: some View {
         NavigationView {
-            Group {
-                if showingMap {
-                    mapView
-                        .navigationBarItems(trailing: listButton)
-                } else {
-                    HeritageTreeListView(viewModel: viewModel)
-                        .navigationBarItems(trailing: mapButton)
+            VStack {
+                HeritageTreeListView(viewModel: viewModel)
+                    .navigationBarItems(trailing: mapButton)
+                    .navigationBarTitle("Heritage Trees")
+
+                if let selectedTreeViewModel = selectedTreeViewModel {
+                    NavigationLink(
+                        "",
+                        destination: HeritageTreeDetailView(
+                            viewModel: binded(viewModel: selectedTreeViewModel)
+                        ),
+                        isActive: .constant(true)
+                    )
                 }
             }
-            .navigationBarTitle("Heritage Trees", displayMode: .inline)
+        }
+        .sheet(isPresented: $showingMap) {
+            mapView
+                .navigationBarItems(trailing: listButton)
         }
         .onAppear {
             self.viewModel.getHeritageTrees()
+        }
+        .onDisappear {
+            selectedTreeViewModel = nil
         }
     }
 
@@ -43,8 +56,15 @@ struct HomeView: View {
         HeritageTreeMapListView(
             viewModel: MappableHeritageTreeListViewModel(
                 treeViewModels: viewModel.treeViewModels
-            )
+            ),
+            isShowing: $showingMap,
+            selectedTreeViewModel: $selectedTreeViewModel
         )
+    }
+
+    private func binded(viewModel: HeritageTreeViewModel) -> HeritageTreeViewModel {
+        let index = self.viewModel.treeViewModels.firstIndex(where: { $0.id == viewModel.id })!
+        return self.viewModel.treeViewModels[index]
     }
 }
 
