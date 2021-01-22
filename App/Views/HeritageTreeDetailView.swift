@@ -77,7 +77,7 @@ private struct AttributeRow: View {
         if let value = value {
             VStack(alignment: .leading) {
                 Text(name)
-                    .foregroundColor(.gray)
+                    .foregroundColor(.mutedText)
                     .font(.caption)
                 Text(value)
             }

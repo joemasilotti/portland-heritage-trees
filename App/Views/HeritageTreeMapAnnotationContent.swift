@@ -7,6 +7,6 @@ struct HeritageTreeMapAnnotationContent: View {
             .resizable()
             .aspectRatio(contentMode: .fit)
             .frame(height: 30)
-            .foregroundColor(.gray)
+            .foregroundColor(.mutedText)
     }
 }

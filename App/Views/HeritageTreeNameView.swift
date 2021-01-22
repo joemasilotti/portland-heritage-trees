@@ -24,7 +24,7 @@ struct HeritageTreeNameView: View {
                 .font(.title)
             Text(viewModel.scientificName)
                 .font(.title3)
-                .foregroundColor(.gray)
+                .foregroundColor(.mutedText)
         }
     }
 }

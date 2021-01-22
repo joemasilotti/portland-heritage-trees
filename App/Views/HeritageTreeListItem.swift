@@ -11,16 +11,28 @@ struct HeritageTreeListItem: View {
 
             if viewModel.isVisited {
                 Image(systemName: "checkmark.circle.fill")
-                    .foregroundColor(.gray)
+                    .foregroundColor(.accentColor)
             }
         }
     }
 }
 
 struct HeritageTreeListItem_Previews: PreviewProvider {
+    static var visitedTreeViewModel: HeritageTreeViewModel {
+        let viewModel = HeritageTreeViewModel.preview
+        viewModel.isVisited = true
+        return viewModel
+    }
+
     static var previews: some View {
-        HeritageTreeListItem(viewModel: HeritageTreeViewModel.preview)
-            .previewLayout(PreviewLayout.sizeThatFits)
-            .padding()
+        Group {
+            HeritageTreeListItem(viewModel: HeritageTreeViewModel.preview)
+                .previewLayout(PreviewLayout.sizeThatFits)
+                .padding()
+
+            HeritageTreeListItem(viewModel: visitedTreeViewModel)
+                .previewLayout(PreviewLayout.sizeThatFits)
+                .padding()
+        }
     }
 }

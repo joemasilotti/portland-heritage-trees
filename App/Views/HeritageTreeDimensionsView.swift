@@ -7,10 +7,10 @@ struct HeritageTreeDimensionsView: View {
         HStack(spacing: 16) {
             VStack(alignment: .leading, spacing: 16) {
                 if let height = viewModel.height {
-                    DimensionView(name: "Height", value: height, color: .gray)
+                    DimensionView(name: "Height", value: height)
                 }
                 if let spread = viewModel.spread {
-                    DimensionView(name: "Spread", value: spread, color: .gray)
+                    DimensionView(name: "Spread", value: spread)
                 }
             }
 
@@ -18,10 +18,10 @@ struct HeritageTreeDimensionsView: View {
 
             VStack(alignment: .leading, spacing: 16) {
                 if let diameter = viewModel.diameter {
-                    DimensionView(name: "Diameter", value: diameter, color: .gray)
+                    DimensionView(name: "Diameter", value: diameter)
                 }
                 if let circumference = viewModel.circumference {
-                    DimensionView(name: "Circumference", value: circumference, color: .gray)
+                    DimensionView(name: "Circumference", value: circumference)
                 }
             }
         }
@@ -32,22 +32,22 @@ struct HeritageTreeDimensionsView: View {
 private struct DimensionView: View {
     let name: String
     let value: String
-    let color: Color
 
     var body: some View {
         HStack(spacing: 16) {
             Image(name)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(height: 32)
-                .padding(8)
-                .background(color)
+                .frame(height: 28)
+                .padding(10)
+                .foregroundColor(.white)
+                .background(Color.accentColor)
                 .cornerRadius(10)
             VStack(alignment: .leading) {
                 Text(name)
                     .font(.caption)
                     .bold()
-                    .foregroundColor(.gray)
+                    .foregroundColor(.mutedText)
                 Text(value)
                     .font(.title2)
                     .bold()
