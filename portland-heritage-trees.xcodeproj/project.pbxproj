@@ -441,7 +441,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_ASSET_PATHS = "\"App/Preview Content\"";
 				DEVELOPMENT_TEAM = 6JS2VP4ATY;
 				ENABLE_PREVIEWS = YES;
@@ -453,6 +454,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.masilotti.portland-heritage-trees";
 				PRODUCT_NAME = "Heritage Trees";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.masilotti.portland-heritage-trees";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
