@@ -46,5 +46,7 @@
 	</array>
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Your location will be shown on the map and not stored anywhere.</string>
 </dict>
 </plist>

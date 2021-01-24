@@ -5,19 +5,22 @@ struct HeritageTreeMapView: View {
     let coordinate: CLLocationCoordinate2D
     let viewModel: HeritageTreeViewModel
 
+    private let locationManager = LocationManager()
+
     @State private var region = MKCoordinateRegion(
         center: CLLocationCoordinate2D.northWestNeighborhood,
         span: MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005)
     )
 
     var body: some View {
-        Map(coordinateRegion: $region, annotationItems: [viewModel]) { _ in
+        Map(coordinateRegion: $region, interactionModes: .all, showsUserLocation: true, userTrackingMode: nil, annotationItems: [viewModel]) { _ in
             MapAnnotation(coordinate: coordinate) {
                 HeritageTreeMapAnnotationContent()
             }
         }
         .onAppear {
             region.center = coordinate
+            locationManager.rerequestAuthorization()
         }
     }
 }

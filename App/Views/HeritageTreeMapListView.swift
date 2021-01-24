@@ -6,6 +6,8 @@ struct HeritageTreeMapListView: View {
     @Binding var isShowing: Bool
     @Binding var selectedTreeViewModel: HeritageTreeViewModel?
 
+    private let locationManager = LocationManager()
+
     @State private var region = MKCoordinateRegion(
         center: CLLocationCoordinate2D.northWestNeighborhood,
         span: MKCoordinateSpan(latitudeDelta: 0.15, longitudeDelta: 0.15)
@@ -13,7 +15,7 @@ struct HeritageTreeMapListView: View {
 
     var body: some View {
         NavigationView {
-            Map(coordinateRegion: $region, annotationItems: viewModel.treeViewModels) { viewModel in
+            Map(coordinateRegion: $region, interactionModes: .all, showsUserLocation: true, userTrackingMode: nil, annotationItems: viewModel.treeViewModels) { viewModel in
                 MapAnnotation(coordinate: viewModel.coordinate) {
                     HeritageTreeMapAnnotationContent()
                         .onTapGesture {
@@ -25,6 +27,9 @@ struct HeritageTreeMapListView: View {
             .ignoresSafeArea(.all)
             .navigationBarTitle("Heritage Trees", displayMode: .inline)
             .navigationBarItems(trailing: dismissButton)
+        }
+        .onAppear() {
+            locationManager.requestAuthorization()
         }
     }
 
