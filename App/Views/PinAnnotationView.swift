@@ -1,14 +1,12 @@
 import MapKit
 
-class GreenPinAnnotationView: MKPinAnnotationView {
+class PinAnnotationView: MKPinAnnotationView {
     override init(annotation: MKAnnotation?, reuseIdentifier: String?) {
         super.init(annotation: annotation, reuseIdentifier: reuseIdentifier)
 
-        pinTintColor = UIColor(.accentColor)
-        canShowCallout = true
-
         let button = UIButton(type: .detailDisclosure)
         rightCalloutAccessoryView = button
+        canShowCallout = true
     }
 
     @available(*, unavailable)

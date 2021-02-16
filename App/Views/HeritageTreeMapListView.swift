@@ -16,7 +16,7 @@ struct HeritageTreeMapListView: View {
 
     var body: some View {
         Group {
-            MapView(annotations: viewModel.treeViewModels.map { $0.pointAnnotation }) { annotation in
+            MapView(annotations: viewModel.treeViewModels.map { $0.annotation }) { annotation in
                 selectedAnnotation = annotation as? HeritageTreeAnnotation
                 isActive = true
             }
