@@ -2,11 +2,12 @@ import MapKit
 import SwiftUI
 
 struct HeritageTreeMapListView: View {
-    @ObservedObject var viewModel: MappableHeritageTreeListViewModel
+    @ObservedObject var viewModel: HeritageTreeListViewModel
     @Binding var isShowing: Bool
-    @Binding var selectedTreeViewModel: HeritageTreeViewModel?
 
     private let locationManager = LocationManager()
+    @State private var selectedAnnotation: HeritageTreeAnnotation?
+    @State private var isActive = false
 
     @State private var region = MKCoordinateRegion(
         center: CLLocationCoordinate2D.northWestNeighborhood,
@@ -14,42 +15,31 @@ struct HeritageTreeMapListView: View {
     )
 
     var body: some View {
-        NavigationView {
-            Map(coordinateRegion: $region, interactionModes: .all, showsUserLocation: true, userTrackingMode: nil, annotationItems: viewModel.treeViewModels) { viewModel in
-                MapAnnotation(coordinate: viewModel.coordinate) {
-                    HeritageTreeMapAnnotationContent()
-                        .onTapGesture {
-                            isShowing = false
-                            selectedTreeViewModel = viewModel.heritageTreeViewModel
-                        }
-                }
+        Group {
+            MapView(annotations: viewModel.treeViewModels.map { $0.pointAnnotation }) { annotation in
+                selectedAnnotation = annotation as? HeritageTreeAnnotation
+                isActive = true
             }
             .ignoresSafeArea(.all)
-            .navigationBarTitle("Heritage Trees", displayMode: .inline)
-            .navigationBarItems(trailing: dismissButton)
-        }
-        .onAppear() {
-            locationManager.requestAuthorization()
-        }
-    }
 
-    private var dismissButton: some View {
-        Button(action: { isShowing = false }) {
-            Text("Done")
+            if let viewModel = selectedAnnotation?.viewModel {
+                NavigationLink(destination: HeritageTreeDetailView(viewModel: viewModel), isActive: $isActive) {
+                    EmptyView()
+                }
+            }
+        }
+        .onAppear {
+            isActive = false
+            locationManager.requestAuthorization()
         }
     }
 }
 
 struct HeritageTreeMapListView_Previews: PreviewProvider {
-    static let viewModel = MappableHeritageTreeListViewModel(
-        treeViewModels: [HeritageTreeViewModel.preview]
-    )
-
     static var previews: some View {
         HeritageTreeMapListView(
-            viewModel: viewModel,
-            isShowing: .constant(true),
-            selectedTreeViewModel: .constant(nil)
+            viewModel: HeritageTreeListViewModel.preview,
+            isShowing: .constant(true)
         )
     }
 }

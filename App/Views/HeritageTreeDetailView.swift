@@ -7,7 +7,7 @@ struct HeritageTreeDetailView: View {
     var body: some View {
         ZStack {
             VStack {
-                if let coordinate = viewModel.mappableViewModel?.coordinate {
+                if let coordinate = viewModel.coordinate {
                     HeritageTreeMapView(coordinate: coordinate, viewModel: viewModel)
                         .frame(height: 200)
                 }
@@ -51,7 +51,7 @@ private struct LocationRow: View {
     let viewModel: HeritageTreeViewModel
 
     var body: some View {
-        if let coordinate = viewModel.mappableViewModel?.coordinate {
+        if let coordinate = viewModel.coordinate {
             NavigationLink(destination: mapView(coordinate: coordinate)) {
                 content
             }

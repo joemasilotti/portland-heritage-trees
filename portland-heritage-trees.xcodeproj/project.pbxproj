@@ -36,10 +36,12 @@
 		8447ADEC25B565610045D247 /* WikipediaURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447ADEB25B565610045D247 /* WikipediaURL.swift */; };
 		8447ADF125B5E4EC0045D247 /* HeritageTreeMapListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447ADF025B5E4EC0045D247 /* HeritageTreeMapListView.swift */; };
 		8447ADF425B5E5F10045D247 /* CLLocationCoordinate2DPortland.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447ADF325B5E5F10045D247 /* CLLocationCoordinate2DPortland.swift */; };
-		8447ADF825B5E6FD0045D247 /* MappableHeritageTreeListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447ADF725B5E6FD0045D247 /* MappableHeritageTreeListViewModel.swift */; };
 		8447ADFD25B6365A0045D247 /* HeritageTreeMapAnnotationContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447ADFC25B6365A0045D247 /* HeritageTreeMapAnnotationContent.swift */; };
-		8447AE0125B63FCC0045D247 /* MappableHeritageTreeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447AE0025B63FCC0045D247 /* MappableHeritageTreeViewModel.swift */; };
+		8447AE0125B63FCC0045D247 /* HeritageTreeAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447AE0025B63FCC0045D247 /* HeritageTreeAnnotation.swift */; };
+		8495158325DB459D002E8DA0 /* GreenPinAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8495158225DB459D002E8DA0 /* GreenPinAnnotationView.swift */; };
 		84A4479C25BDCF5400DEA3B9 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A4479B25BDCF5400DEA3B9 /* LocationManager.swift */; };
+		84A447A125BDD24700DEA3B9 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A447A025BDD24700DEA3B9 /* MapView.swift */; };
+		84A447A925BE1FD700DEA3B9 /* MappableHeritageTreeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A447A825BE1FD700DEA3B9 /* MappableHeritageTreeViewModel.swift */; };
 		84BDFBD225BB5E9E00AAB247 /* SolidButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BDFBD125BB5E9E00AAB247 /* SolidButton.swift */; };
 /* End PBXBuildFile section */
 
@@ -75,10 +77,12 @@
 		8447ADEB25B565610045D247 /* WikipediaURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikipediaURL.swift; sourceTree = "<group>"; };
 		8447ADF025B5E4EC0045D247 /* HeritageTreeMapListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeritageTreeMapListView.swift; sourceTree = "<group>"; };
 		8447ADF325B5E5F10045D247 /* CLLocationCoordinate2DPortland.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationCoordinate2DPortland.swift; sourceTree = "<group>"; };
-		8447ADF725B5E6FD0045D247 /* MappableHeritageTreeListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MappableHeritageTreeListViewModel.swift; sourceTree = "<group>"; };
 		8447ADFC25B6365A0045D247 /* HeritageTreeMapAnnotationContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeritageTreeMapAnnotationContent.swift; sourceTree = "<group>"; };
-		8447AE0025B63FCC0045D247 /* MappableHeritageTreeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MappableHeritageTreeViewModel.swift; sourceTree = "<group>"; };
+		8447AE0025B63FCC0045D247 /* HeritageTreeAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeritageTreeAnnotation.swift; sourceTree = "<group>"; };
+		8495158225DB459D002E8DA0 /* GreenPinAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenPinAnnotationView.swift; sourceTree = "<group>"; };
 		84A4479B25BDCF5400DEA3B9 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		84A447A025BDD24700DEA3B9 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		84A447A825BE1FD700DEA3B9 /* MappableHeritageTreeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MappableHeritageTreeViewModel.swift; sourceTree = "<group>"; };
 		84BDFBD125BB5E9E00AAB247 /* SolidButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolidButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,13 +116,14 @@
 		841CB1FA25B4FF3D00D0B283 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				84BDFBD025BB5E9100AAB247 /* Styles */,
-				841CB20425B4FF3E00D0B283 /* Info.plist */,
 				841CB1FF25B4FF3E00D0B283 /* Assets.xcassets */,
 				843B284825BB1C7100032BAA /* Appearance */,
 				841CB23725B50ADB00D0B283 /* Models */,
 				841CB20125B4FF3E00D0B283 /* Preview Content */,
+				8495157F25DB3EC4002E8DA0 /* Resources */,
 				841CB23525B50AD200D0B283 /* Services */,
+				84BDFBD025BB5E9100AAB247 /* Styles */,
+				8495158025DB3ECB002E8DA0 /* Supporting Files */,
 				841CB23625B50AD800D0B283 /* View Models */,
 				841CB23425B50AD000D0B283 /* Views */,
 			);
@@ -138,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				841CB1FB25B4FF3D00D0B283 /* App.swift */,
+				8495158225DB459D002E8DA0 /* GreenPinAnnotationView.swift */,
 				841CB24925B51F8E00D0B283 /* HeritageTreeDetailView.swift */,
 				8447ADDE25B557FC0045D247 /* HeritageTreeDimensionsView.swift */,
 				841CB21825B5083E00D0B283 /* HeritageTreeListItem.swift */,
@@ -147,6 +153,7 @@
 				8447ADDA25B54C630045D247 /* HeritageTreeMapView.swift */,
 				8447ADE725B561610045D247 /* HeritageTreeNameView.swift */,
 				841CB21325B5054F00D0B283 /* HomeView.swift */,
+				84A447A025BDD24700DEA3B9 /* MapView.swift */,
 				8447ADE425B560E80045D247 /* SafariView.swift */,
 			);
 			path = Views;
@@ -168,8 +175,7 @@
 			children = (
 				841CB23125B50AC500D0B283 /* HeritageTreeListViewModel.swift */,
 				841CB24E25B5205500D0B283 /* HeritageTreeViewModel.swift */,
-				8447ADF725B5E6FD0045D247 /* MappableHeritageTreeListViewModel.swift */,
-				8447AE0025B63FCC0045D247 /* MappableHeritageTreeViewModel.swift */,
+				84A447A825BE1FD700DEA3B9 /* MappableHeritageTreeViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -181,6 +187,7 @@
 				8447ADF325B5E5F10045D247 /* CLLocationCoordinate2DPortland.swift */,
 				841CB23D25B51E0E00D0B283 /* Environment.swift */,
 				841CB22E25B50AA800D0B283 /* HeritageTree.swift */,
+				8447AE0025B63FCC0045D247 /* HeritageTreeAnnotation.swift */,
 				841CB22B25B50A9600D0B283 /* HeritageTreeListAPIResponse.swift */,
 				84A4479B25BDCF5400DEA3B9 /* LocationManager.swift */,
 				841CB22425B50A5000D0B283 /* OpenDataEndpoint.swift */,
@@ -197,6 +204,21 @@
 				843B284525BB1C5700032BAA /* ColorHelper.swift */,
 			);
 			path = Appearance;
+			sourceTree = "<group>";
+		};
+		8495157F25DB3EC4002E8DA0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8495158025DB3ECB002E8DA0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				841CB20425B4FF3E00D0B283 /* Info.plist */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		84BDFBD025BB5E9100AAB247 /* Styles */ = {
@@ -278,18 +300,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				841CB23225B50AC500D0B283 /* HeritageTreeListViewModel.swift in Sources */,
+				84A447A125BDD24700DEA3B9 /* MapView.swift in Sources */,
+				8495158325DB459D002E8DA0 /* GreenPinAnnotationView.swift in Sources */,
 				841CB24F25B5205500D0B283 /* HeritageTreeViewModel.swift in Sources */,
 				841CB22925B50A7E00D0B283 /* OpenDataService.swift in Sources */,
 				84BDFBD225BB5E9E00AAB247 /* SolidButton.swift in Sources */,
 				841CB23E25B51E0E00D0B283 /* Environment.swift in Sources */,
 				8447ADDB25B54C630045D247 /* HeritageTreeMapView.swift in Sources */,
-				8447ADF825B5E6FD0045D247 /* MappableHeritageTreeListViewModel.swift in Sources */,
 				84A4479C25BDCF5400DEA3B9 /* LocationManager.swift in Sources */,
 				8447ADDF25B557FC0045D247 /* HeritageTreeDimensionsView.swift in Sources */,
 				8447ADF125B5E4EC0045D247 /* HeritageTreeMapListView.swift in Sources */,
 				841CB22F25B50AA900D0B283 /* HeritageTree.swift in Sources */,
 				843B284625BB1C5700032BAA /* ColorHelper.swift in Sources */,
 				841CB22525B50A5000D0B283 /* OpenDataEndpoint.swift in Sources */,
+				84A447A925BE1FD700DEA3B9 /* MappableHeritageTreeViewModel.swift in Sources */,
 				841CB22225B50A3500D0B283 /* APISession.swift in Sources */,
 				8447ADE825B561610045D247 /* HeritageTreeNameView.swift in Sources */,
 				8447ADFD25B6365A0045D247 /* HeritageTreeMapAnnotationContent.swift in Sources */,
@@ -300,7 +324,7 @@
 				843B284125BA827200032BAA /* Persistence.swift in Sources */,
 				8447ADF425B5E5F10045D247 /* CLLocationCoordinate2DPortland.swift in Sources */,
 				841CB21C25B50A1200D0B283 /* RequestBuilder.swift in Sources */,
-				8447AE0125B63FCC0045D247 /* MappableHeritageTreeViewModel.swift in Sources */,
+				8447AE0125B63FCC0045D247 /* HeritageTreeAnnotation.swift in Sources */,
 				841CB20D25B4FFB900D0B283 /* APIService.swift in Sources */,
 				843B283D25BA71A600032BAA /* HeritageTreeListView.swift in Sources */,
 				841CB1FC25B4FF3D00D0B283 /* App.swift in Sources */,
@@ -439,7 +463,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"App/Preview Content\"";
 				DEVELOPMENT_TEAM = 6JS2VP4ATY;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = App/Info.plist;
+				INFOPLIST_FILE = "App/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -462,7 +486,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"App/Preview Content\"";
 				DEVELOPMENT_TEAM = 6JS2VP4ATY;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = App/Info.plist;
+				INFOPLIST_FILE = "App/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

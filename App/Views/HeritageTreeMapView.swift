@@ -14,10 +14,9 @@ struct HeritageTreeMapView: View {
 
     var body: some View {
         Map(coordinateRegion: $region, interactionModes: .all, showsUserLocation: true, userTrackingMode: nil, annotationItems: [viewModel]) { _ in
-            MapAnnotation(coordinate: coordinate) {
-                HeritageTreeMapAnnotationContent()
-            }
+            MapPin(coordinate: coordinate, tint: .accentColor)
         }
+        .ignoresSafeArea(.all)
         .onAppear {
             region.center = coordinate
             locationManager.rerequestAuthorization()

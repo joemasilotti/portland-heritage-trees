@@ -1,15 +1,11 @@
 import MapKit
 
-class MappableHeritageTreeViewModel: ObservableObject, Identifiable {
-    var id: String { String(tree.properties.treeID) }
-    let coordinate: CLLocationCoordinate2D
-    var heritageTreeViewModel: HeritageTreeViewModel { HeritageTreeViewModel(tree: tree) }
-
-    private let tree: HeritageTree
-
-    init?(tree: HeritageTree) {
-        guard let latitude = tree.properties.lat, let longitude = tree.properties.lon else { return nil }
-        self.coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-        self.tree = tree
+extension HeritageTreeViewModel {
+    var pointAnnotation: MKAnnotation? { HeritageTreeAnnotation(viewModel: self) }
+    var coordinate: CLLocationCoordinate2D? {
+        if let lat = tree.properties.lat, let lon = tree.properties.lon {
+            return CLLocationCoordinate2D(latitude: lat, longitude: lon)
+        }
+        return nil
     }
 }

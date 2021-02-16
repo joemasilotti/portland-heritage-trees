@@ -1,26 +1,25 @@
-import MapKit
+import Foundation
 
 class HeritageTreeViewModel: ObservableObject, Identifiable {
-    let tree: HeritageTree
-
     @Published var isVisited: Bool
 
-    var id: String { String(tree.properties.treeID) }
-    var uniqueName: String { "Tree #\(id)" }
-    var commonName: String { tree.properties.common }
-    var scientificName: String { tree.properties.scientific }
+    let tree: HeritageTree
     var address: String? { tree.properties.siteAddress }
+    var commonName: String { tree.properties.common }
+    var height: String? { "\(tree.properties.height) ft" }
+    var id: String { String(tree.properties.treeID) }
     var neighborhood: String? { tree.properties.neighborhood?.capitalized }
     var notes: String? { tree.properties.notes }
-    var height: String? { "\(tree.properties.height) ft" }
+    var scientificName: String { tree.properties.scientific }
     var treeFact: String? { tree.properties.treeFactLong }
-    var mappableViewModel: MappableHeritageTreeViewModel? { MappableHeritageTreeViewModel(tree: tree) }
+    var uniqueName: String { "Tree #\(id)" }
     var visitedButtonImageName: String { isVisited ? "checkmark.circle.fill" : "checkmark.circle" }
     var visitedButtonText: String { isVisited ? "Visited" : "Mark as visited" }
+    var wikipediaURL: URL? { WikipediaURL.search(querying: commonName) }
 
-    var spread: String? {
-        guard let spread = tree.properties.spread else { return nil }
-        return "\(spread) ft"
+    var circumference: String? {
+        guard let circumference = tree.properties.circumf else { return nil }
+        return "\(circumference) in"
     }
 
     var diameter: String? {
@@ -28,13 +27,9 @@ class HeritageTreeViewModel: ObservableObject, Identifiable {
         return "\(diameter) in"
     }
 
-    var circumference: String? {
-        guard let circumference = tree.properties.circumf else { return nil }
-        return "\(circumference) in"
-    }
-
-    var wikipediaURL: URL? {
-        WikipediaURL.search(querying: commonName)
+    var spread: String? {
+        guard let spread = tree.properties.spread else { return nil }
+        return "\(spread) ft"
     }
 
     init(tree: HeritageTree) {
