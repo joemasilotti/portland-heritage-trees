@@ -116,7 +116,6 @@
 		841CB1FA25B4FF3D00D0B283 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				841CB1FF25B4FF3E00D0B283 /* Assets.xcassets */,
 				843B284825BB1C7100032BAA /* Appearance */,
 				841CB23725B50ADB00D0B283 /* Models */,
 				841CB20125B4FF3E00D0B283 /* Preview Content */,
@@ -209,6 +208,7 @@
 		8495157F25DB3EC4002E8DA0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				841CB1FF25B4FF3E00D0B283 /* Assets.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
