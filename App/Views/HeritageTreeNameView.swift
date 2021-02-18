@@ -8,7 +8,12 @@ struct HeritageTreeNameView: View {
     var body: some View {
         if let url = viewModel.wikipediaURL {
             Button(action: { showingSafari = true }) {
-                content
+                HStack {
+                    content
+                    Spacer()
+                    Image(systemName: "arrow.up.forward.app")
+                        .foregroundColor(.gray)
+                }
             }
             .sheet(isPresented: $showingSafari) {
                 SafariView(url: url)
