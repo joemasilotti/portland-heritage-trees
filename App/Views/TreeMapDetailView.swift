@@ -3,7 +3,7 @@ import SwiftUI
 
 struct TreeMapDetailView: View {
     let coordinate: CLLocationCoordinate2D
-    let viewModel: TreeViewModel
+    let tree: Tree
 
     private let locationManager = LocationManager()
 
@@ -13,7 +13,7 @@ struct TreeMapDetailView: View {
     )
 
     var body: some View {
-        Map(coordinateRegion: $region, interactionModes: .all, showsUserLocation: true, userTrackingMode: nil, annotationItems: [viewModel]) { _ in
+        Map(coordinateRegion: $region, interactionModes: .all, showsUserLocation: true, userTrackingMode: nil, annotationItems: [tree]) { _ in
             MapPin(coordinate: coordinate, tint: .accentColor)
         }
         .ignoresSafeArea(.all)

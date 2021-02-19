@@ -4,12 +4,13 @@ struct ToggleVisitedTreeButton: View {
     let tree: Tree
 
     @EnvironmentObject private var store: TreeStore
+
     private var viewModel: VisitableTreeViewModel {
         VisitableTreeViewModel(tree: tree, isVisited: store.isVisited(tree: tree))
     }
 
     var body: some View {
-        Button(action: { store.toggleTreeIsVisited(viewModel.tree) }) {
+        Button(action: { store.toggleTreeIsVisited(tree) }) {
             Image(systemName: viewModel.visitedButtonImageName)
                 .resizable()
                 .aspectRatio(contentMode: .fit)

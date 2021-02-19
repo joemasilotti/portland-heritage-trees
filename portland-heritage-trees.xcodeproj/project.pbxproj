@@ -35,7 +35,6 @@
 		8447ADEC25B565610045D247 /* WikipediaURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447ADEB25B565610045D247 /* WikipediaURL.swift */; };
 		8447ADF125B5E4EC0045D247 /* TreeMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447ADF025B5E4EC0045D247 /* TreeMapView.swift */; };
 		8447ADF425B5E5F10045D247 /* CLLocationCoordinate2DPortland.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447ADF325B5E5F10045D247 /* CLLocationCoordinate2DPortland.swift */; };
-		8447ADFD25B6365A0045D247 /* TreeMapAnnotationContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447ADFC25B6365A0045D247 /* TreeMapAnnotationContent.swift */; };
 		8447AE0125B63FCC0045D247 /* TreeAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447AE0025B63FCC0045D247 /* TreeAnnotation.swift */; };
 		8483BB0125DF6A1B00C7396C /* MapView.Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8483BAFF25DF6A1B00C7396C /* MapView.Coordinator.swift */; };
 		8483BB0225DF6A1B00C7396C /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8483BB0025DF6A1B00C7396C /* MapView.swift */; };
@@ -90,7 +89,6 @@
 		8447ADEB25B565610045D247 /* WikipediaURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikipediaURL.swift; sourceTree = "<group>"; };
 		8447ADF025B5E4EC0045D247 /* TreeMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeMapView.swift; sourceTree = "<group>"; };
 		8447ADF325B5E5F10045D247 /* CLLocationCoordinate2DPortland.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationCoordinate2DPortland.swift; sourceTree = "<group>"; };
-		8447ADFC25B6365A0045D247 /* TreeMapAnnotationContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeMapAnnotationContent.swift; sourceTree = "<group>"; };
 		8447AE0025B63FCC0045D247 /* TreeAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeAnnotation.swift; sourceTree = "<group>"; };
 		8483BAFF25DF6A1B00C7396C /* MapView.Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.Coordinator.swift; sourceTree = "<group>"; };
 		8483BB0025DF6A1B00C7396C /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
@@ -187,7 +185,6 @@
 				841CB21825B5083E00D0B283 /* TreeListItem.swift */,
 				843B283C25BA71A600032BAA /* TreeListView.swift */,
 				8483BB3725E0148700C7396C /* TreeLocationRow.swift */,
-				8447ADFC25B6365A0045D247 /* TreeMapAnnotationContent.swift */,
 				8447ADDA25B54C630045D247 /* TreeMapDetailView.swift */,
 				8447ADF025B5E4EC0045D247 /* TreeMapView.swift */,
 			);
@@ -377,7 +374,6 @@
 				841CB22225B50A3500D0B283 /* APISession.swift in Sources */,
 				8483BB3125E0114800C7396C /* SafariButton.swift in Sources */,
 				8447ADE825B561610045D247 /* NameView.swift in Sources */,
-				8447ADFD25B6365A0045D247 /* TreeMapAnnotationContent.swift in Sources */,
 				841CB21425B5054F00D0B283 /* HomeView.swift in Sources */,
 				8483BB4825E01DBD00C7396C /* OpenDataTree+Tree.swift in Sources */,
 				841CB21925B5083E00D0B283 /* TreeListItem.swift in Sources */,

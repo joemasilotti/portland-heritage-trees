@@ -2,10 +2,12 @@ import MapKit
 import SwiftUI
 
 struct TreeLocationRow: View {
-    let viewModel: TreeViewModel
+    let tree: Tree
+
+    private var viewModel: TreeViewModel { TreeViewModel(tree: tree) }
 
     var body: some View {
-        if let coordinate = viewModel.tree.coordinate {
+        if let coordinate = tree.coordinate {
             NavigationLink(destination: mapView(coordinate: coordinate)) {
                 content
             }
@@ -26,14 +28,14 @@ struct TreeLocationRow: View {
     }
 
     private func mapView(coordinate: CLLocationCoordinate2D) -> some View {
-        TreeMapDetailView(coordinate: coordinate, viewModel: viewModel)
+        TreeMapDetailView(coordinate: coordinate, tree: tree)
             .navigationTitle(viewModel.address ?? "")
     }
 }
 
 struct TreeLocationRow_Previews: PreviewProvider {
     static var previews: some View {
-        TreeLocationRow(viewModel: TreeViewModel.preview)
+        TreeLocationRow(tree: Tree.preview)
             .autosizedPreview()
     }
 }

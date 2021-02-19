@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct TreeDetailView: View {
-    var tree: Tree
+    let tree: Tree
 
     @EnvironmentObject private var store: TreeStore
     private var viewModel: VisitableTreeViewModel {
@@ -11,12 +11,12 @@ struct TreeDetailView: View {
     var body: some View {
         ZStack {
             VStack {
-                MapView(viewModel: viewModel)
+                MapView(tree: tree)
 
                 List {
                     NameView(url: viewModel.wikipediaURL, title: tree.commonName, subtitle: tree.scientificName)
                         .padding(.vertical, 8)
-                    TreeLocationRow(viewModel: viewModel)
+                    TreeLocationRow(tree: tree)
                         .padding(.vertical, 8)
                     TreeDimensionsView(height: viewModel.height, spread: viewModel.spread, diameter: viewModel.diameter, circumference: viewModel.circumference)
                         .padding(.vertical, 8)
@@ -39,11 +39,11 @@ struct TreeDetailView: View {
 
 extension TreeDetailView {
     struct MapView: View {
-        var viewModel: TreeViewModel
+        let tree: Tree
 
         var body: some View {
-            if let coordinate = viewModel.tree.coordinate {
-                TreeMapDetailView(coordinate: coordinate, viewModel: viewModel)
+            if let coordinate = tree.coordinate {
+                TreeMapDetailView(coordinate: coordinate, tree: tree)
                     .frame(height: 200)
             }
         }
