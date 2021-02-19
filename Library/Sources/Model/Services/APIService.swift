@@ -1,6 +1,6 @@
 import Combine
 import Foundation
 
-protocol APIService {
+public protocol APIService {
     func request<T: Decodable>(with builder: RequestBuilder) -> AnyPublisher<T, APIError>
 }

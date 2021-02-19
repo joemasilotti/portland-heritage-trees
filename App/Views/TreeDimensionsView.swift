@@ -1,3 +1,4 @@
+import Model
 import SwiftUI
 
 struct TreeDimensionsView: View {
@@ -9,15 +10,15 @@ struct TreeDimensionsView: View {
     var body: some View {
         HStack(spacing: 16) {
             DimensionGroup(dimensions: [
-                Dimension(name: "Height", value: height),
-                Dimension(name: "Spread", value: spread)
+                Model.Dimension(name: "Height", value: height),
+                Model.Dimension(name: "Spread", value: spread)
             ])
 
             Spacer()
 
             DimensionGroup(dimensions: [
-                Dimension(name: "Diameter", value: diameter),
-                Dimension(name: "Circumference", value: circumference)
+                Model.Dimension(name: "Diameter", value: diameter),
+                Model.Dimension(name: "Circumference", value: circumference)
             ])
         }
         .padding(.trailing)

@@ -1,9 +1,9 @@
 import MapKit
 import SwiftUI
 
-class TreeAnnotation: NSObject {
-    let coordinate: CLLocationCoordinate2D
-    let tree: Tree
+public class TreeAnnotation: NSObject {
+    public let coordinate: CLLocationCoordinate2D
+    public let tree: Tree
     let isVisited: Bool
 
     init?(tree: Tree, isVisited: Bool) {
@@ -15,13 +15,13 @@ class TreeAnnotation: NSObject {
 }
 
 extension TreeAnnotation: MKAnnotation {
-    var title: String? { "Tree #\(tree.id)" }
-    var subtitle: String? { tree.commonName }
+    public var title: String? { "Tree #\(tree.id)" }
+    public var subtitle: String? { tree.commonName }
 }
 
 extension TreeAnnotation: Annotation {
-    var identifier: Int { tree.id }
-    var tintColor: UIColor { isVisited ? color.withAlphaComponent(0.5) : color }
+    public var identifier: Int { tree.id }
+    public var tintColor: UIColor { isVisited ? color.withAlphaComponent(0.5) : color }
 
     private var color: UIColor { UIColor(Color.accentColor) }
 }

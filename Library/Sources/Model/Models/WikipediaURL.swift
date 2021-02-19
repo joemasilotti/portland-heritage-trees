@@ -1,7 +1,7 @@
 import Foundation
 
-struct WikipediaURL {
-    static func search(querying query: String) -> URL? {
+public enum WikipediaURL {
+    public static func search(querying query: String) -> URL? {
         guard let encodedQuery = query.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
         else { return nil }
 

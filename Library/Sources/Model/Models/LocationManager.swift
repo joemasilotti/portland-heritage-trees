@@ -1,14 +1,16 @@
 import CoreLocation
 
-struct LocationManager {
+public struct LocationManager {
     private let locationManager = CLLocationManager()
 
-    func requestAuthorization() {
+    public init() {}
+
+    public func requestAuthorization() {
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
     }
 
-    func rerequestAuthorization() {
+    public func rerequestAuthorization() {
         if locationManager.authorizationStatus == .authorizedWhenInUse {
             locationManager.requestWhenInUseAuthorization()
         }

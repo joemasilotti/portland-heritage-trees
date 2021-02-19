@@ -1,25 +1,37 @@
 import Combine
 
-class TreeStore: ObservableObject, OpenDataService {
-    @Published private(set) var treeAnnotations = [TreeAnnotation]()
+public class TreeStore: ObservableObject, OpenDataService {
+    @Published public private(set) var treeAnnotations = [TreeAnnotation]()
     let apiService: APIService
 
-    @Published private(set) var isVisitedStatuses: [Int: Bool] {
+    @Published public private(set) var trees = [Tree]() {
         didSet { setTreeAnnotations() }
     }
 
-    @Published private(set) var trees = [Tree]() {
+    @Published internal private(set) var isVisitedStatuses: [Int: Bool] {
         didSet { setTreeAnnotations() }
     }
 
     private var cancellables = Set<AnyCancellable>()
 
-    init(apiService: APIService) {
+    public init(apiService: APIService) {
         self.apiService = apiService
         self.isVisitedStatuses = Persistence.isVisitedStatuses
+        getTrees()
     }
 
-    func getTrees() {
+    public func isVisited(tree: Tree) -> Bool {
+        isVisitedStatuses[tree.id] ?? false
+    }
+
+    public func toggleTreeIsVisited(_ tree: Tree) {
+        var statuses = isVisitedStatuses
+        statuses[tree.id] = !(statuses[tree.id] ?? false)
+        isVisitedStatuses = statuses
+        Persistence.isVisitedStatuses = isVisitedStatuses
+    }
+
+    private func getTrees() {
         getTrees()
             .sink(receiveCompletion: { result in
                 switch result {
@@ -33,17 +45,6 @@ class TreeStore: ObservableObject, OpenDataService {
                     .map { $0.tree }
             }
             .store(in: &cancellables)
-    }
-
-    func isVisited(tree: Tree) -> Bool {
-        isVisitedStatuses[tree.id] ?? false
-    }
-
-    func toggleTreeIsVisited(_ tree: Tree) {
-        var statuses = isVisitedStatuses
-        statuses[tree.id] = !(statuses[tree.id] ?? false)
-        isVisitedStatuses = statuses
-        Persistence.isVisitedStatuses = isVisitedStatuses
     }
 
     private func setTreeAnnotations() {

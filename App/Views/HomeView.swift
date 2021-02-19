@@ -1,3 +1,4 @@
+import Model
 import SwiftUI
 
 struct HomeView: View {
@@ -16,9 +17,6 @@ struct HomeView: View {
                 }
             }
             .navigationBarTitle("Heritage Trees", displayMode: .inline)
-        }
-        .onAppear {
-            store.getTrees()
         }
     }
 

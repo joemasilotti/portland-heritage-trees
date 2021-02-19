@@ -1,5 +1,5 @@
 import Foundation
 
-protocol RequestBuilder {
+public protocol RequestBuilder {
     var urlRequest: URLRequest { get }
 }

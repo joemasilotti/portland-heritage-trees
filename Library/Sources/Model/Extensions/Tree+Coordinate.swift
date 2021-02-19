@@ -1,7 +1,7 @@
 import MapKit
 
 extension Tree {
-    var coordinate: CLLocationCoordinate2D? {
+    public var coordinate: CLLocationCoordinate2D? {
         guard
             let latitude = latitude,
             let longitude = longitude

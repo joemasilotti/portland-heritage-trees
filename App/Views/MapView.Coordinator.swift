@@ -1,4 +1,5 @@
 import MapKit
+import Model
 
 public extension MapView {
     class Coordinator: NSObject, MKMapViewDelegate {

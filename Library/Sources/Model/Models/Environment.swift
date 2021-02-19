@@ -1,9 +1,9 @@
-enum Environment {
+public enum Environment {
     case local, remote
 }
 
 extension Environment {
-    var apiService: APIService {
+    public var apiService: APIService {
         switch self {
         case .local:
             return LocalSession()
@@ -14,7 +14,7 @@ extension Environment {
 }
 
 extension Environment {
-    var store: TreeStore {
+    public var store: TreeStore {
         TreeStore(apiService: apiService)
     }
 }

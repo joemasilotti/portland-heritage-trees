@@ -1,3 +1,5 @@
+import Model
+
 class VisitableTreeViewModel: TreeViewModel {
     let isVisited: Bool
     var visitedButtonImageName: String { isVisited ? "checkmark.circle.fill" : "checkmark.circle" }

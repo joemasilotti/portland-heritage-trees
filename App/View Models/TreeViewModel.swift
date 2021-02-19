@@ -1,4 +1,5 @@
 import Foundation
+import Model
 
 class TreeViewModel: ObservableObject, Identifiable {
     let tree: Tree

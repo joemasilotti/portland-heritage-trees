@@ -1,4 +1,5 @@
 import MapKit
+import Model
 import SwiftUI
 
 struct TreeMapView: View {

@@ -1,25 +1,25 @@
 import Foundation
 
-struct Tree: Identifiable {
-    let address: String?
-    let circumference: Float?
-    let commonName: String
-    let diameter: Int?
-    let fact: String?
-    let height: Int
-    let id: Int
-    let latitude: Double?
-    let longitude: Double?
-    let neighborhood: String?
-    let notes: String?
-    let scientificName: String
-    let spread: Int?
+public struct Tree: Identifiable {
+    public let address: String?
+    public let circumference: Float?
+    public let commonName: String
+    public let diameter: Int?
+    public let fact: String?
+    public let height: Int
+    public let id: Int
+    public let latitude: Double?
+    public let longitude: Double?
+    public let neighborhood: String?
+    public let notes: String?
+    public let scientificName: String
+    public let spread: Int?
 }
 
 // MARK: Preview Content
 
 extension Tree {
-    static var preview: Self {
+    public static var preview: Self {
         Self(
             address: "1111 SW 10th AVE",
             circumference: 12.8,

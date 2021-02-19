@@ -1,3 +1,3 @@
-enum APIError: Error {
+public enum APIError: Error {
     case decoding, http(Int), unknown
 }

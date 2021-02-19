@@ -1,7 +1,8 @@
+import Model
 import SwiftUI
 
 struct DimensionGroup: View {
-    let dimensions: [Dimension]
+    let dimensions: [Model.Dimension]
 
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
@@ -17,9 +18,9 @@ struct DimensionGroup: View {
 struct DimensionGroup_Previews: PreviewProvider {
     static var previews: some View {
         DimensionGroup(dimensions: [
-            Dimension(name: "Height", value: "205 ft"),
-            Dimension(name: "Missing value", value: nil),
-            Dimension(name: "Spread", value: "80 ft"),
+            Model.Dimension(name: "Height", value: "205 ft"),
+            Model.Dimension(name: "Missing value", value: nil),
+            Model.Dimension(name: "Spread", value: "80 ft"),
         ])
             .autosizedPreview()
     }
