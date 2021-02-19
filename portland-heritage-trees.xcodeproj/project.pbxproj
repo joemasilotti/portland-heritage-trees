@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -53,6 +53,7 @@
 		8483BB4525E01D9400C7396C /* OpenDataTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8483BB4425E01D9400C7396C /* OpenDataTree.swift */; };
 		8483BB4825E01DBD00C7396C /* OpenDataTree+Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8483BB4725E01DBD00C7396C /* OpenDataTree+Tree.swift */; };
 		8483BB5225E03E1A00C7396C /* VisitableTreeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8483BB5125E03E1A00C7396C /* VisitableTreeViewModel.swift */; };
+		8488FAF725E0472F00914310 /* Library in Frameworks */ = {isa = PBXBuildFile; productRef = 8488FAF625E0472F00914310 /* Library */; };
 		8495158325DB459D002E8DA0 /* PinAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8495158225DB459D002E8DA0 /* PinAnnotationView.swift */; };
 		84A4479C25BDCF5400DEA3B9 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A4479B25BDCF5400DEA3B9 /* LocationManager.swift */; };
 		84BDFBD225BB5E9E00AAB247 /* SolidButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BDFBD125BB5E9E00AAB247 /* SolidButton.swift */; };
@@ -107,6 +108,7 @@
 		8483BB4425E01D9400C7396C /* OpenDataTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenDataTree.swift; sourceTree = "<group>"; };
 		8483BB4725E01DBD00C7396C /* OpenDataTree+Tree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OpenDataTree+Tree.swift"; sourceTree = "<group>"; };
 		8483BB5125E03E1A00C7396C /* VisitableTreeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitableTreeViewModel.swift; sourceTree = "<group>"; };
+		8488FAF225E046DB00914310 /* Library */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Library; sourceTree = "<group>"; };
 		8495158225DB459D002E8DA0 /* PinAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinAnnotationView.swift; sourceTree = "<group>"; };
 		84A4479B25BDCF5400DEA3B9 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		84BDFBD125BB5E9E00AAB247 /* SolidButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolidButton.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8488FAF725E0472F00914310 /* Library in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,7 +130,9 @@
 			isa = PBXGroup;
 			children = (
 				841CB1FA25B4FF3D00D0B283 /* App */,
+				8488FAF225E046DB00914310 /* Library */,
 				841CB1F925B4FF3D00D0B283 /* Products */,
+				8488FAF525E0472F00914310 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -260,6 +265,13 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		8488FAF525E0472F00914310 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8495157F25DB3EC4002E8DA0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -300,6 +312,9 @@
 			dependencies = (
 			);
 			name = App;
+			packageProductDependencies = (
+				8488FAF625E0472F00914310 /* Library */,
+			);
 			productName = "Portland Heritage Trees";
 			productReference = 841CB1F825B4FF3D00D0B283 /* Heritage Trees.app */;
 			productType = "com.apple.product-type.application";
@@ -590,6 +605,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8488FAF625E0472F00914310 /* Library */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Library;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 841CB1F025B4FF3D00D0B283 /* Project object */;
 }
