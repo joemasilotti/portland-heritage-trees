@@ -12,32 +12,32 @@
 		841CB20325B4FF3E00D0B283 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 841CB20225B4FF3E00D0B283 /* Preview Assets.xcassets */; };
 		841CB20D25B4FFB900D0B283 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CB20C25B4FFB900D0B283 /* APIService.swift */; };
 		841CB21425B5054F00D0B283 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CB21325B5054F00D0B283 /* HomeView.swift */; };
-		841CB21925B5083E00D0B283 /* HeritageTreeListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CB21825B5083E00D0B283 /* HeritageTreeListItem.swift */; };
+		841CB21925B5083E00D0B283 /* TreeListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CB21825B5083E00D0B283 /* TreeListItem.swift */; };
 		841CB21C25B50A1200D0B283 /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CB21B25B50A1200D0B283 /* RequestBuilder.swift */; };
 		841CB21F25B50A1D00D0B283 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CB21E25B50A1D00D0B283 /* APIError.swift */; };
 		841CB22225B50A3500D0B283 /* APISession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CB22125B50A3500D0B283 /* APISession.swift */; };
 		841CB22525B50A5000D0B283 /* OpenDataEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CB22425B50A5000D0B283 /* OpenDataEndpoint.swift */; };
 		841CB22925B50A7E00D0B283 /* OpenDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CB22825B50A7E00D0B283 /* OpenDataService.swift */; };
-		841CB22C25B50A9600D0B283 /* HeritageTreeListAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CB22B25B50A9600D0B283 /* HeritageTreeListAPIResponse.swift */; };
-		841CB22F25B50AA900D0B283 /* HeritageTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CB22E25B50AA800D0B283 /* HeritageTree.swift */; };
-		841CB23225B50AC500D0B283 /* HeritageTreeListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CB23125B50AC500D0B283 /* HeritageTreeListViewModel.swift */; };
-		841CB23B25B50D6C00D0B283 /* HeritageTrees.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 841CB23825B50B7700D0B283 /* HeritageTrees.geojson */; };
+		841CB22C25B50A9600D0B283 /* TreeListAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CB22B25B50A9600D0B283 /* TreeListAPIResponse.swift */; };
+		841CB22F25B50AA900D0B283 /* Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CB22E25B50AA800D0B283 /* Tree.swift */; };
+		841CB23225B50AC500D0B283 /* TreeListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CB23125B50AC500D0B283 /* TreeListViewModel.swift */; };
+		841CB23B25B50D6C00D0B283 /* Trees.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 841CB23825B50B7700D0B283 /* Trees.geojson */; };
 		841CB23E25B51E0E00D0B283 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CB23D25B51E0E00D0B283 /* Environment.swift */; };
 		841CB24225B51E3400D0B283 /* LocalSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CB24125B51E3400D0B283 /* LocalSession.swift */; };
-		841CB24A25B51F8E00D0B283 /* HeritageTreeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CB24925B51F8E00D0B283 /* HeritageTreeDetailView.swift */; };
-		841CB24F25B5205500D0B283 /* HeritageTreeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CB24E25B5205500D0B283 /* HeritageTreeViewModel.swift */; };
-		843B283D25BA71A600032BAA /* HeritageTreeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B283C25BA71A600032BAA /* HeritageTreeListView.swift */; };
+		841CB24A25B51F8E00D0B283 /* TreeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CB24925B51F8E00D0B283 /* TreeDetailView.swift */; };
+		841CB24F25B5205500D0B283 /* TreeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CB24E25B5205500D0B283 /* TreeViewModel.swift */; };
+		843B283D25BA71A600032BAA /* TreeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B283C25BA71A600032BAA /* TreeListView.swift */; };
 		843B284125BA827200032BAA /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B284025BA827200032BAA /* Persistence.swift */; };
 		843B284625BB1C5700032BAA /* ColorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B284525BB1C5700032BAA /* ColorHelper.swift */; };
-		8447ADDB25B54C630045D247 /* HeritageTreeMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447ADDA25B54C630045D247 /* HeritageTreeMapView.swift */; };
-		8447ADDF25B557FC0045D247 /* HeritageTreeDimensionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447ADDE25B557FC0045D247 /* HeritageTreeDimensionsView.swift */; };
+		8447ADDB25B54C630045D247 /* TreeMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447ADDA25B54C630045D247 /* TreeMapView.swift */; };
+		8447ADDF25B557FC0045D247 /* TreeDimensionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447ADDE25B557FC0045D247 /* TreeDimensionsView.swift */; };
 		8447ADE525B560E80045D247 /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447ADE425B560E80045D247 /* SafariView.swift */; };
-		8447ADE825B561610045D247 /* HeritageTreeNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447ADE725B561610045D247 /* HeritageTreeNameView.swift */; };
+		8447ADE825B561610045D247 /* TreeNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447ADE725B561610045D247 /* TreeNameView.swift */; };
 		8447ADEC25B565610045D247 /* WikipediaURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447ADEB25B565610045D247 /* WikipediaURL.swift */; };
-		8447ADF125B5E4EC0045D247 /* HeritageTreeMapListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447ADF025B5E4EC0045D247 /* HeritageTreeMapListView.swift */; };
+		8447ADF125B5E4EC0045D247 /* TreeMapListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447ADF025B5E4EC0045D247 /* TreeMapListView.swift */; };
 		8447ADF425B5E5F10045D247 /* CLLocationCoordinate2DPortland.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447ADF325B5E5F10045D247 /* CLLocationCoordinate2DPortland.swift */; };
-		8447ADFD25B6365A0045D247 /* HeritageTreeMapAnnotationContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447ADFC25B6365A0045D247 /* HeritageTreeMapAnnotationContent.swift */; };
-		8447AE0125B63FCC0045D247 /* HeritageTreeAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447AE0025B63FCC0045D247 /* HeritageTreeAnnotation.swift */; };
+		8447ADFD25B6365A0045D247 /* TreeMapAnnotationContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447ADFC25B6365A0045D247 /* TreeMapAnnotationContent.swift */; };
+		8447AE0125B63FCC0045D247 /* TreeAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447AE0025B63FCC0045D247 /* TreeAnnotation.swift */; };
 		8495158325DB459D002E8DA0 /* PinAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8495158225DB459D002E8DA0 /* PinAnnotationView.swift */; };
 		8495158725DB472F002E8DA0 /* Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8495158625DB472F002E8DA0 /* Annotation.swift */; };
 		84A4479C25BDCF5400DEA3B9 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A4479B25BDCF5400DEA3B9 /* LocationManager.swift */; };
@@ -54,32 +54,32 @@
 		841CB20425B4FF3E00D0B283 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		841CB20C25B4FFB900D0B283 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		841CB21325B5054F00D0B283 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		841CB21825B5083E00D0B283 /* HeritageTreeListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeritageTreeListItem.swift; sourceTree = "<group>"; };
+		841CB21825B5083E00D0B283 /* TreeListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeListItem.swift; sourceTree = "<group>"; };
 		841CB21B25B50A1200D0B283 /* RequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
 		841CB21E25B50A1D00D0B283 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		841CB22125B50A3500D0B283 /* APISession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APISession.swift; sourceTree = "<group>"; };
 		841CB22425B50A5000D0B283 /* OpenDataEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenDataEndpoint.swift; sourceTree = "<group>"; };
 		841CB22825B50A7E00D0B283 /* OpenDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenDataService.swift; sourceTree = "<group>"; };
-		841CB22B25B50A9600D0B283 /* HeritageTreeListAPIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeritageTreeListAPIResponse.swift; sourceTree = "<group>"; };
-		841CB22E25B50AA800D0B283 /* HeritageTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeritageTree.swift; sourceTree = "<group>"; };
-		841CB23125B50AC500D0B283 /* HeritageTreeListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeritageTreeListViewModel.swift; sourceTree = "<group>"; };
-		841CB23825B50B7700D0B283 /* HeritageTrees.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = HeritageTrees.geojson; sourceTree = "<group>"; };
+		841CB22B25B50A9600D0B283 /* TreeListAPIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeListAPIResponse.swift; sourceTree = "<group>"; };
+		841CB22E25B50AA800D0B283 /* Tree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tree.swift; sourceTree = "<group>"; };
+		841CB23125B50AC500D0B283 /* TreeListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeListViewModel.swift; sourceTree = "<group>"; };
+		841CB23825B50B7700D0B283 /* Trees.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = Trees.geojson; sourceTree = "<group>"; };
 		841CB23D25B51E0E00D0B283 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		841CB24125B51E3400D0B283 /* LocalSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalSession.swift; sourceTree = "<group>"; };
-		841CB24925B51F8E00D0B283 /* HeritageTreeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeritageTreeDetailView.swift; sourceTree = "<group>"; };
-		841CB24E25B5205500D0B283 /* HeritageTreeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeritageTreeViewModel.swift; sourceTree = "<group>"; };
-		843B283C25BA71A600032BAA /* HeritageTreeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeritageTreeListView.swift; sourceTree = "<group>"; };
+		841CB24925B51F8E00D0B283 /* TreeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeDetailView.swift; sourceTree = "<group>"; };
+		841CB24E25B5205500D0B283 /* TreeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeViewModel.swift; sourceTree = "<group>"; };
+		843B283C25BA71A600032BAA /* TreeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeListView.swift; sourceTree = "<group>"; };
 		843B284025BA827200032BAA /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		843B284525BB1C5700032BAA /* ColorHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHelper.swift; sourceTree = "<group>"; };
-		8447ADDA25B54C630045D247 /* HeritageTreeMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeritageTreeMapView.swift; sourceTree = "<group>"; };
-		8447ADDE25B557FC0045D247 /* HeritageTreeDimensionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeritageTreeDimensionsView.swift; sourceTree = "<group>"; };
+		8447ADDA25B54C630045D247 /* TreeMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeMapView.swift; sourceTree = "<group>"; };
+		8447ADDE25B557FC0045D247 /* TreeDimensionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeDimensionsView.swift; sourceTree = "<group>"; };
 		8447ADE425B560E80045D247 /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
-		8447ADE725B561610045D247 /* HeritageTreeNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeritageTreeNameView.swift; sourceTree = "<group>"; };
+		8447ADE725B561610045D247 /* TreeNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeNameView.swift; sourceTree = "<group>"; };
 		8447ADEB25B565610045D247 /* WikipediaURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikipediaURL.swift; sourceTree = "<group>"; };
-		8447ADF025B5E4EC0045D247 /* HeritageTreeMapListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeritageTreeMapListView.swift; sourceTree = "<group>"; };
+		8447ADF025B5E4EC0045D247 /* TreeMapListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeMapListView.swift; sourceTree = "<group>"; };
 		8447ADF325B5E5F10045D247 /* CLLocationCoordinate2DPortland.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationCoordinate2DPortland.swift; sourceTree = "<group>"; };
-		8447ADFC25B6365A0045D247 /* HeritageTreeMapAnnotationContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeritageTreeMapAnnotationContent.swift; sourceTree = "<group>"; };
-		8447AE0025B63FCC0045D247 /* HeritageTreeAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeritageTreeAnnotation.swift; sourceTree = "<group>"; };
+		8447ADFC25B6365A0045D247 /* TreeMapAnnotationContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeMapAnnotationContent.swift; sourceTree = "<group>"; };
+		8447AE0025B63FCC0045D247 /* TreeAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeAnnotation.swift; sourceTree = "<group>"; };
 		8495158225DB459D002E8DA0 /* PinAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinAnnotationView.swift; sourceTree = "<group>"; };
 		8495158625DB472F002E8DA0 /* Annotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Annotation.swift; sourceTree = "<group>"; };
 		84A4479B25BDCF5400DEA3B9 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
@@ -134,7 +134,7 @@
 		841CB20125B4FF3E00D0B283 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				841CB23825B50B7700D0B283 /* HeritageTrees.geojson */,
+				841CB23825B50B7700D0B283 /* Trees.geojson */,
 				841CB20225B4FF3E00D0B283 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -144,18 +144,18 @@
 			isa = PBXGroup;
 			children = (
 				841CB1FB25B4FF3D00D0B283 /* App.swift */,
-				841CB24925B51F8E00D0B283 /* HeritageTreeDetailView.swift */,
-				8447ADDE25B557FC0045D247 /* HeritageTreeDimensionsView.swift */,
-				841CB21825B5083E00D0B283 /* HeritageTreeListItem.swift */,
-				843B283C25BA71A600032BAA /* HeritageTreeListView.swift */,
-				8447ADFC25B6365A0045D247 /* HeritageTreeMapAnnotationContent.swift */,
-				8447ADF025B5E4EC0045D247 /* HeritageTreeMapListView.swift */,
-				8447ADDA25B54C630045D247 /* HeritageTreeMapView.swift */,
-				8447ADE725B561610045D247 /* HeritageTreeNameView.swift */,
 				841CB21325B5054F00D0B283 /* HomeView.swift */,
 				84A447A025BDD24700DEA3B9 /* MapView.swift */,
 				8495158225DB459D002E8DA0 /* PinAnnotationView.swift */,
 				8447ADE425B560E80045D247 /* SafariView.swift */,
+				841CB24925B51F8E00D0B283 /* TreeDetailView.swift */,
+				8447ADDE25B557FC0045D247 /* TreeDimensionsView.swift */,
+				841CB21825B5083E00D0B283 /* TreeListItem.swift */,
+				843B283C25BA71A600032BAA /* TreeListView.swift */,
+				8447ADFC25B6365A0045D247 /* TreeMapAnnotationContent.swift */,
+				8447ADF025B5E4EC0045D247 /* TreeMapListView.swift */,
+				8447ADDA25B54C630045D247 /* TreeMapView.swift */,
+				8447ADE725B561610045D247 /* TreeNameView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -174,10 +174,10 @@
 		841CB23625B50AD800D0B283 /* View Models */ = {
 			isa = PBXGroup;
 			children = (
-				841CB23125B50AC500D0B283 /* HeritageTreeListViewModel.swift */,
-				841CB24E25B5205500D0B283 /* HeritageTreeViewModel.swift */,
-				84A447A825BE1FD700DEA3B9 /* MappableHeritageTreeViewModel.swift */,
 				8495158625DB472F002E8DA0 /* Annotation.swift */,
+				84A447A825BE1FD700DEA3B9 /* MappableHeritageTreeViewModel.swift */,
+				841CB23125B50AC500D0B283 /* TreeListViewModel.swift */,
+				841CB24E25B5205500D0B283 /* TreeViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -188,13 +188,13 @@
 				841CB21E25B50A1D00D0B283 /* APIError.swift */,
 				8447ADF325B5E5F10045D247 /* CLLocationCoordinate2DPortland.swift */,
 				841CB23D25B51E0E00D0B283 /* Environment.swift */,
-				841CB22E25B50AA800D0B283 /* HeritageTree.swift */,
-				8447AE0025B63FCC0045D247 /* HeritageTreeAnnotation.swift */,
-				841CB22B25B50A9600D0B283 /* HeritageTreeListAPIResponse.swift */,
 				84A4479B25BDCF5400DEA3B9 /* LocationManager.swift */,
 				841CB22425B50A5000D0B283 /* OpenDataEndpoint.swift */,
 				843B284025BA827200032BAA /* Persistence.swift */,
 				841CB21B25B50A1200D0B283 /* RequestBuilder.swift */,
+				841CB22E25B50AA800D0B283 /* Tree.swift */,
+				8447AE0025B63FCC0045D247 /* TreeAnnotation.swift */,
+				841CB22B25B50A9600D0B283 /* TreeListAPIResponse.swift */,
 				8447ADEB25B565610045D247 /* WikipediaURL.swift */,
 			);
 			path = Models;
@@ -290,7 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				841CB20325B4FF3E00D0B283 /* Preview Assets.xcassets in Resources */,
-				841CB23B25B50D6C00D0B283 /* HeritageTrees.geojson in Resources */,
+				841CB23B25B50D6C00D0B283 /* Trees.geojson in Resources */,
 				841CB20025B4FF3E00D0B283 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,38 +302,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				841CB23225B50AC500D0B283 /* HeritageTreeListViewModel.swift in Sources */,
+				841CB23225B50AC500D0B283 /* TreeListViewModel.swift in Sources */,
 				84A447A125BDD24700DEA3B9 /* MapView.swift in Sources */,
 				8495158325DB459D002E8DA0 /* PinAnnotationView.swift in Sources */,
-				841CB24F25B5205500D0B283 /* HeritageTreeViewModel.swift in Sources */,
+				841CB24F25B5205500D0B283 /* TreeViewModel.swift in Sources */,
 				841CB22925B50A7E00D0B283 /* OpenDataService.swift in Sources */,
 				84BDFBD225BB5E9E00AAB247 /* SolidButton.swift in Sources */,
 				841CB23E25B51E0E00D0B283 /* Environment.swift in Sources */,
-				8447ADDB25B54C630045D247 /* HeritageTreeMapView.swift in Sources */,
+				8447ADDB25B54C630045D247 /* TreeMapView.swift in Sources */,
 				84A4479C25BDCF5400DEA3B9 /* LocationManager.swift in Sources */,
-				8447ADDF25B557FC0045D247 /* HeritageTreeDimensionsView.swift in Sources */,
-				8447ADF125B5E4EC0045D247 /* HeritageTreeMapListView.swift in Sources */,
-				841CB22F25B50AA900D0B283 /* HeritageTree.swift in Sources */,
+				8447ADDF25B557FC0045D247 /* TreeDimensionsView.swift in Sources */,
+				8447ADF125B5E4EC0045D247 /* TreeMapListView.swift in Sources */,
+				841CB22F25B50AA900D0B283 /* Tree.swift in Sources */,
 				843B284625BB1C5700032BAA /* ColorHelper.swift in Sources */,
 				841CB22525B50A5000D0B283 /* OpenDataEndpoint.swift in Sources */,
 				84A447A925BE1FD700DEA3B9 /* MappableHeritageTreeViewModel.swift in Sources */,
 				841CB22225B50A3500D0B283 /* APISession.swift in Sources */,
-				8447ADE825B561610045D247 /* HeritageTreeNameView.swift in Sources */,
-				8447ADFD25B6365A0045D247 /* HeritageTreeMapAnnotationContent.swift in Sources */,
+				8447ADE825B561610045D247 /* TreeNameView.swift in Sources */,
+				8447ADFD25B6365A0045D247 /* TreeMapAnnotationContent.swift in Sources */,
 				8495158725DB472F002E8DA0 /* Annotation.swift in Sources */,
 				841CB21425B5054F00D0B283 /* HomeView.swift in Sources */,
-				841CB21925B5083E00D0B283 /* HeritageTreeListItem.swift in Sources */,
+				841CB21925B5083E00D0B283 /* TreeListItem.swift in Sources */,
 				8447ADE525B560E80045D247 /* SafariView.swift in Sources */,
-				841CB22C25B50A9600D0B283 /* HeritageTreeListAPIResponse.swift in Sources */,
+				841CB22C25B50A9600D0B283 /* TreeListAPIResponse.swift in Sources */,
 				843B284125BA827200032BAA /* Persistence.swift in Sources */,
 				8447ADF425B5E5F10045D247 /* CLLocationCoordinate2DPortland.swift in Sources */,
 				841CB21C25B50A1200D0B283 /* RequestBuilder.swift in Sources */,
-				8447AE0125B63FCC0045D247 /* HeritageTreeAnnotation.swift in Sources */,
+				8447AE0125B63FCC0045D247 /* TreeAnnotation.swift in Sources */,
 				841CB20D25B4FFB900D0B283 /* APIService.swift in Sources */,
-				843B283D25BA71A600032BAA /* HeritageTreeListView.swift in Sources */,
+				843B283D25BA71A600032BAA /* TreeListView.swift in Sources */,
 				841CB1FC25B4FF3D00D0B283 /* App.swift in Sources */,
 				841CB21F25B50A1D00D0B283 /* APIError.swift in Sources */,
-				841CB24A25B51F8E00D0B283 /* HeritageTreeDetailView.swift in Sources */,
+				841CB24A25B51F8E00D0B283 /* TreeDetailView.swift in Sources */,
 				8447ADEC25B565610045D247 /* WikipediaURL.swift in Sources */,
 				841CB24225B51E3400D0B283 /* LocalSession.swift in Sources */,
 			);

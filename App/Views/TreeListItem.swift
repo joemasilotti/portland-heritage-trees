@@ -1,7 +1,7 @@
 import SwiftUI
 
-struct HeritageTreeListItem: View {
-    @ObservedObject var viewModel: HeritageTreeViewModel
+struct TreeListItem: View {
+    @ObservedObject var viewModel: TreeViewModel
 
     var body: some View {
         HStack {
@@ -17,20 +17,20 @@ struct HeritageTreeListItem: View {
     }
 }
 
-struct HeritageTreeListItem_Previews: PreviewProvider {
-    static var visitedTreeViewModel: HeritageTreeViewModel {
-        let viewModel = HeritageTreeViewModel.preview
+struct TreeListItem_Previews: PreviewProvider {
+    static var visitedTreeViewModel: TreeViewModel {
+        let viewModel = TreeViewModel.preview
         viewModel.isVisited = true
         return viewModel
     }
 
     static var previews: some View {
         Group {
-            HeritageTreeListItem(viewModel: HeritageTreeViewModel.preview)
+            TreeListItem(viewModel: TreeViewModel.preview)
                 .previewLayout(PreviewLayout.sizeThatFits)
                 .padding()
 
-            HeritageTreeListItem(viewModel: visitedTreeViewModel)
+            TreeListItem(viewModel: visitedTreeViewModel)
                 .previewLayout(PreviewLayout.sizeThatFits)
                 .padding()
         }

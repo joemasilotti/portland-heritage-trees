@@ -1,12 +1,12 @@
 import MapKit
 import SwiftUI
 
-struct HeritageTreeMapListView: View {
-    @ObservedObject var viewModel: HeritageTreeListViewModel
+struct TreeMapListView: View {
+    @ObservedObject var viewModel: TreeListViewModel
     @Binding var isShowing: Bool
 
     private let locationManager = LocationManager()
-    @State private var selectedAnnotation: HeritageTreeAnnotation?
+    @State private var selectedAnnotation: TreeAnnotation?
     @State private var isActive = false
 
     @State private var region = MKCoordinateRegion(
@@ -17,13 +17,13 @@ struct HeritageTreeMapListView: View {
     var body: some View {
         Group {
             MapView(annotations: viewModel.treeViewModels.map { $0.annotation }) { annotation in
-                selectedAnnotation = annotation as? HeritageTreeAnnotation
+                selectedAnnotation = annotation as? TreeAnnotation
                 isActive = true
             }
             .ignoresSafeArea(.all)
 
             if let viewModel = selectedAnnotation?.viewModel {
-                NavigationLink(destination: HeritageTreeDetailView(viewModel: viewModel), isActive: $isActive) {
+                NavigationLink(destination: TreeDetailView(viewModel: viewModel), isActive: $isActive) {
                     EmptyView()
                 }
             }
@@ -35,10 +35,10 @@ struct HeritageTreeMapListView: View {
     }
 }
 
-struct HeritageTreeMapListView_Previews: PreviewProvider {
+struct TreeMapListView_Previews: PreviewProvider {
     static var previews: some View {
-        HeritageTreeMapListView(
-            viewModel: HeritageTreeListViewModel.preview,
+        TreeMapListView(
+            viewModel: TreeListViewModel.preview,
             isShowing: .constant(true)
         )
     }

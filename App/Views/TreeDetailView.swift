@@ -1,22 +1,22 @@
 import MapKit
 import SwiftUI
 
-struct HeritageTreeDetailView: View {
-    @ObservedObject var viewModel: HeritageTreeViewModel
+struct TreeDetailView: View {
+    @ObservedObject var viewModel: TreeViewModel
 
     var body: some View {
         ZStack {
             VStack {
                 if let coordinate = viewModel.coordinate {
-                    HeritageTreeMapView(coordinate: coordinate, viewModel: viewModel)
+                    TreeMapView(coordinate: coordinate, viewModel: viewModel)
                         .frame(height: 200)
                 }
                 List {
-                    HeritageTreeNameView(viewModel: viewModel)
+                    TreeNameView(viewModel: viewModel)
                         .padding(.vertical, 8)
                     LocationRow(viewModel: viewModel)
                         .padding(.vertical, 8)
-                    HeritageTreeDimensionsView(viewModel: viewModel)
+                    TreeDimensionsView(viewModel: viewModel)
                         .padding(.vertical, 8)
 
                     AttributeRow(name: "Notes", value: viewModel.notes)
@@ -48,7 +48,7 @@ struct HeritageTreeDetailView: View {
 }
 
 private struct LocationRow: View {
-    let viewModel: HeritageTreeViewModel
+    let viewModel: TreeViewModel
 
     var body: some View {
         if let coordinate = viewModel.coordinate {
@@ -72,7 +72,7 @@ private struct LocationRow: View {
     }
 
     private func mapView(coordinate: CLLocationCoordinate2D) -> some View {
-        HeritageTreeMapView(coordinate: coordinate, viewModel: viewModel)
+        TreeMapView(coordinate: coordinate, viewModel: viewModel)
             .navigationTitle(viewModel.address ?? "")
     }
 }
@@ -93,8 +93,8 @@ private struct AttributeRow: View {
     }
 }
 
-struct HeritageTreeDetailView_Previews: PreviewProvider {
+struct TreeDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        HeritageTreeDetailView(viewModel: HeritageTreeViewModel.preview)
+        TreeDetailView(viewModel: TreeViewModel.preview)
     }
 }

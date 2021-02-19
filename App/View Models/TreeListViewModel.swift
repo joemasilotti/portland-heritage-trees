@@ -1,8 +1,8 @@
 import Combine
 
-class HeritageTreeListViewModel: ObservableObject, OpenDataService {
+class TreeListViewModel: ObservableObject, OpenDataService {
     let apiSession: APIService
-    @Published var treeViewModels = [HeritageTreeViewModel]()
+    @Published var treeViewModels = [TreeViewModel]()
 
     private var cancellables = Set<AnyCancellable>()
 
@@ -10,8 +10,8 @@ class HeritageTreeListViewModel: ObservableObject, OpenDataService {
         self.apiSession = apiSession
     }
 
-    func getHeritageTrees() {
-        getHeritageTrees()
+    func getTrees() {
+        getTrees()
             .sink(receiveCompletion: { result in
                 switch result {
                 case .failure(let error):
@@ -21,7 +21,7 @@ class HeritageTreeListViewModel: ObservableObject, OpenDataService {
                 }
             }) { result in
                 self.treeViewModels = result.features
-                    .map { HeritageTreeViewModel(tree: $0) }
+                    .map { TreeViewModel(tree: $0) }
             }
             .store(in: &cancellables)
     }
@@ -29,8 +29,8 @@ class HeritageTreeListViewModel: ObservableObject, OpenDataService {
 
 // MARK: Preview Content
 
-extension HeritageTreeListViewModel {
-    static var preview: HeritageTreeListViewModel {
-        HeritageTreeListViewModel(apiSession: Environment.local.apiSession)
+extension TreeListViewModel {
+    static var preview: TreeListViewModel {
+        TreeListViewModel(apiSession: Environment.local.apiSession)
     }
 }

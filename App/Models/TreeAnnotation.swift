@@ -1,10 +1,10 @@
 import MapKit
 
-class HeritageTreeAnnotation: NSObject {
-    let viewModel: HeritageTreeViewModel
+class TreeAnnotation: NSObject {
+    let viewModel: TreeViewModel
     let coordinate: CLLocationCoordinate2D
 
-    init?(viewModel: HeritageTreeViewModel) {
+    init?(viewModel: TreeViewModel) {
         guard let coordinate = viewModel.coordinate else { return nil }
 
         self.coordinate = coordinate
@@ -12,12 +12,12 @@ class HeritageTreeAnnotation: NSObject {
     }
 }
 
-extension HeritageTreeAnnotation: MKAnnotation {
+extension TreeAnnotation: MKAnnotation {
     var title: String? { viewModel.uniqueName }
     var subtitle: String? { viewModel.commonName }
 }
 
-extension HeritageTreeAnnotation: Annotation {
+extension TreeAnnotation: Annotation {
     var tintColor: UIColor {
         viewModel.isVisited ? defaultColor.withAlphaComponent(0.5) : defaultColor
     }

@@ -1,7 +1,7 @@
 import SwiftUI
 
-struct HeritageTreeDimensionsView: View {
-    let viewModel: HeritageTreeViewModel
+struct TreeDimensionsView: View {
+    let viewModel: TreeViewModel
 
     var body: some View {
         HStack(spacing: 16) {
@@ -56,9 +56,9 @@ private struct DimensionView: View {
     }
 }
 
-struct HeritageTreeDimensionsView_Previews: PreviewProvider {
+struct TreeDimensionsView_Previews: PreviewProvider {
     static var previews: some View {
-        HeritageTreeDimensionsView(viewModel: HeritageTreeViewModel.preview)
+        TreeDimensionsView(viewModel: TreeViewModel.preview)
             .previewLayout(PreviewLayout.sizeThatFits)
             .padding()
     }

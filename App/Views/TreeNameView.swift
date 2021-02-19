@@ -1,7 +1,7 @@
 import SwiftUI
 
-struct HeritageTreeNameView: View {
-    let viewModel: HeritageTreeViewModel
+struct TreeNameView: View {
+    let viewModel: TreeViewModel
 
     @State private var showingSafari = false
 
@@ -34,9 +34,9 @@ struct HeritageTreeNameView: View {
     }
 }
 
-struct HeritageTreeNameView_Previews: PreviewProvider {
+struct TreeNameView_Previews: PreviewProvider {
     static var previews: some View {
-        HeritageTreeNameView(viewModel: HeritageTreeViewModel.preview)
+        TreeNameView(viewModel: TreeViewModel.preview)
             .previewLayout(PreviewLayout.sizeThatFits)
             .padding()
     }

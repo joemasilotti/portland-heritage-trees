@@ -1,32 +1,32 @@
 import SwiftUI
 
 struct HomeView: View {
-    @ObservedObject var viewModel: HeritageTreeListViewModel
+    @ObservedObject var viewModel: TreeListViewModel
 
     @State private var showingMap = false
 
     init(environment: Environment) {
-        self.viewModel = HeritageTreeListViewModel(apiSession: environment.apiSession)
+        self.viewModel = TreeListViewModel(apiSession: environment.apiSession)
     }
 
     var body: some View {
         NavigationView {
             Group {
                 if showingMap {
-                    HeritageTreeMapListView(
+                    TreeMapListView(
                         viewModel: viewModel,
                         isShowing: $showingMap
                     )
                     .navigationBarItems(trailing: listButton)
                 } else {
-                    HeritageTreeListView(viewModel: viewModel)
+                    TreeListView(viewModel: viewModel)
                         .navigationBarItems(trailing: mapButton)
                 }
             }
             .navigationBarTitle("Heritage Trees", displayMode: .inline)
         }
         .onAppear {
-            self.viewModel.getHeritageTrees()
+            self.viewModel.getTrees()
         }
     }
 

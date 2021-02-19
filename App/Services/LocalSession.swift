@@ -5,7 +5,7 @@ struct LocalSession: APIService {
     func request<T>(with builder: RequestBuilder) -> AnyPublisher<T, APIError> where T: Decodable {
         let decoder = JSONDecoder()
 
-        if let path = Bundle.main.path(forResource: "HeritageTrees", ofType: "geojson") {
+        if let path = Bundle.main.path(forResource: "Trees", ofType: "geojson") {
             do {
                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
                 return Just(data)

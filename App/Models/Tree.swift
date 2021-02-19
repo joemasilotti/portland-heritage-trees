@@ -1,6 +1,6 @@
 import Foundation
 
-struct HeritageTree: Codable, Identifiable {
+struct Tree: Codable, Identifiable {
     let id = UUID()
     let properties: Properties
 
@@ -45,7 +45,7 @@ struct HeritageTree: Codable, Identifiable {
 
 // MARK: Preview Content
 
-extension HeritageTree {
+extension Tree {
     static var preview: Self {
         Self(properties: Properties(
             treeID: 1,
@@ -65,7 +65,7 @@ extension HeritageTree {
     }
 }
 
-extension HeritageTree.Properties {
+extension Tree.Properties {
     init(treeID: Int, scientific: String, common: String, height: Int) {
         self.treeID = treeID
         self.scientific = scientific

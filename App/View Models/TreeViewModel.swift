@@ -1,9 +1,9 @@
 import Foundation
 
-class HeritageTreeViewModel: ObservableObject, Identifiable {
+class TreeViewModel: ObservableObject, Identifiable {
     @Published var isVisited: Bool
 
-    let tree: HeritageTree
+    let tree: Tree
     var address: String? { tree.properties.siteAddress }
     var commonName: String { tree.properties.common }
     var height: String? { "\(tree.properties.height) ft" }
@@ -32,7 +32,7 @@ class HeritageTreeViewModel: ObservableObject, Identifiable {
         return "\(spread) ft"
     }
 
-    init(tree: HeritageTree) {
+    init(tree: Tree) {
         self.tree = tree
         self.isVisited = Persistence.isTreeVisited(tree)
     }
@@ -46,8 +46,8 @@ class HeritageTreeViewModel: ObservableObject, Identifiable {
 
 // MARK: Preview Content
 
-extension HeritageTreeViewModel {
-    static var preview: HeritageTreeViewModel {
-        HeritageTreeViewModel(tree: HeritageTree.preview)
+extension TreeViewModel {
+    static var preview: TreeViewModel {
+        TreeViewModel(tree: Tree.preview)
     }
 }

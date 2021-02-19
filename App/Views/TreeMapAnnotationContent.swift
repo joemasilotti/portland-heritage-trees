@@ -1,7 +1,7 @@
 import MapKit
 import SwiftUI
 
-struct HeritageTreeMapAnnotationContent: View {
+struct TreeMapAnnotationContent: View {
     var body: some View {
         Image("Tree")
             .resizable()

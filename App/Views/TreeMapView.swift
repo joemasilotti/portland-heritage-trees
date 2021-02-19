@@ -1,9 +1,9 @@
 import MapKit
 import SwiftUI
 
-struct HeritageTreeMapView: View {
+struct TreeMapView: View {
     let coordinate: CLLocationCoordinate2D
-    let viewModel: HeritageTreeViewModel
+    let viewModel: TreeViewModel
 
     private let locationManager = LocationManager()
 
@@ -24,9 +24,9 @@ struct HeritageTreeMapView: View {
     }
 }
 
-struct HeritageTreeMapView_Previews: PreviewProvider {
+struct TreeMapView_Previews: PreviewProvider {
     static var previews: some View {
-        HeritageTreeMapView(coordinate: CLLocationCoordinate2D.northWestNeighborhood, viewModel: HeritageTreeViewModel.preview)
+        TreeMapView(coordinate: CLLocationCoordinate2D.northWestNeighborhood, viewModel: TreeViewModel.preview)
             .previewLayout(PreviewLayout.sizeThatFits)
             .padding()
     }
