@@ -27,7 +27,7 @@ class TreeStore: ObservableObject, OpenDataService {
                 }
             }) { result in
                 self.trees = result.features
-                    .map { TreeViewModel(tree: $0) }
+                    .map { TreeViewModel(tree: $0.tree) }
             }
             .store(in: &cancellables)
     }

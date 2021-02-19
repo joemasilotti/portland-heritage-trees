@@ -12,6 +12,6 @@ struct Persistence {
     }
 
     private static func userDefaultsKey(for tree: Tree) -> String {
-        "tree.visited.\(tree.properties.treeID)"
+        "tree.visited.\(tree.id)"
     }
 }

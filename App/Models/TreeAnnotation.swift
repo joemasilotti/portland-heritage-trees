@@ -18,5 +18,5 @@ extension TreeAnnotation: MKAnnotation {
 
 extension TreeAnnotation: Annotation {
     var identifier: String { tree.id }
-    var tintColor: UIColor { tree.tree.visited ? .green : .red }
+    var tintColor: UIColor { tree.isVisited ? .green : .red }
 }

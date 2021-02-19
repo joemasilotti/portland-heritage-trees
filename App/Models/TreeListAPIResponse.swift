@@ -1,3 +1,3 @@
 struct TreeListAPIResponse: Codable {
-    let features: [Tree]
+    let features: [OpenDataTree]
 }
