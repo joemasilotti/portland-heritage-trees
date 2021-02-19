@@ -10,3 +10,10 @@ struct TreeMapAnnotationContent: View {
             .foregroundColor(.mutedText)
     }
 }
+
+struct TreeMapAnnotationContent_Previews: PreviewProvider {
+    static var previews: some View {
+        TreeMapAnnotationContent()
+            .autosizedPreview()
+    }
+}

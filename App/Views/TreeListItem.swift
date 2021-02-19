@@ -1,15 +1,15 @@
 import SwiftUI
 
 struct TreeListItem: View {
-    @ObservedObject var viewModel: TreeViewModel
+    @ObservedObject var tree: TreeViewModel
 
     var body: some View {
         HStack {
-            Text(viewModel.id)
-            Text(viewModel.commonName)
+            Text(tree.id)
+            Text(tree.commonName)
             Spacer()
 
-            if viewModel.isVisited {
+            if tree.isVisited {
                 Image(systemName: "checkmark.circle.fill")
                     .foregroundColor(.accentColor)
             }
@@ -26,13 +26,11 @@ struct TreeListItem_Previews: PreviewProvider {
 
     static var previews: some View {
         Group {
-            TreeListItem(viewModel: TreeViewModel.preview)
-                .previewLayout(PreviewLayout.sizeThatFits)
-                .padding()
+            TreeListItem(tree: TreeViewModel.preview)
+                .autosizedPreview()
 
-            TreeListItem(viewModel: visitedTreeViewModel)
-                .previewLayout(PreviewLayout.sizeThatFits)
-                .padding()
+            TreeListItem(tree: visitedTreeViewModel)
+                .autosizedPreview()
         }
     }
 }

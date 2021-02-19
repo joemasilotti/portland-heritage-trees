@@ -1,13 +1,18 @@
 import MapKit
 import SwiftUI
 
-private let AnnotationViewIdentifier = "Heritage Tree Annotation View"
+let AnnotationViewIdentifier = "Annotation View"
 
-struct MapView: UIViewRepresentable {
-    let annotations: [Annotation?]
-    var didSelectAnnotation: ((MKAnnotation) -> Void)?
+public struct MapView: UIViewRepresentable {
+    var annotations: [Annotation]
+    var didSelectAnnotation: ((Annotation) -> Void)?
 
-    func makeUIView(context: Context) -> MKMapView {
+    public init(annotations: [Annotation], didSelectAnnotation: ((Annotation) -> Void)?) {
+        self.annotations = annotations
+        self.didSelectAnnotation = didSelectAnnotation
+    }
+
+    public func makeUIView(context: Context) -> MKMapView {
         let mapView = MKMapView()
         mapView.delegate = context.coordinator
         mapView.showsUserLocation = true
@@ -16,36 +21,23 @@ struct MapView: UIViewRepresentable {
         return mapView
     }
 
-    func updateUIView(_ uiView: MKMapView, context: Context) {}
+    // TODO: Move to a different object.
+    public func updateUIView(_ mapView: MKMapView, context: Context) {
+        let existing = mapView.annotations.compactMap { $0 as? Annotation }.sorted(by: { $0.identifier < $1.identifier })
+        let diff = annotations.sorted(by: { $0.coordinate.latitude < $1.coordinate.latitude }).difference(from: existing) { $0 === $1 }
+        for change in diff {
+            switch change {
+                case .insert(_, let element, _): mapView.addAnnotation(element)
+                case .remove(_, let element, _): mapView.removeAnnotation(element)
+            }
+        }
+    }
 
-    func makeCoordinator() -> Coordinator {
+    public func makeCoordinator() -> Coordinator {
         Coordinator(self)
     }
 
-    class Coordinator: NSObject, MKMapViewDelegate {
-        var parent: MapView
-
-        init(_ parent: MapView) {
-            self.parent = parent
-        }
-
-        func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
-            if let annotation = view.annotation {
-                parent.didSelectAnnotation?(annotation)
-            }
-        }
-
-        func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-            guard !(annotation is MKUserLocation) else { return nil }
-
-            let annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: AnnotationViewIdentifier, for: annotation)
-            (annotationView as? PinAnnotationView)?.pinTintColor = (annotation as? Annotation)?.tintColor
-            return annotationView
-        }
-    }
-
     private func addAnnotations(to mapView: MKMapView) {
-        let annotations = self.annotations.compactMap { $0 }
         mapView.addAnnotations(annotations)
         mapView.showAnnotations(annotations, animated: false)
     }

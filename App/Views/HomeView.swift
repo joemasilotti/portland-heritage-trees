@@ -1,32 +1,24 @@
 import SwiftUI
 
 struct HomeView: View {
-    @ObservedObject var viewModel: TreeListViewModel
-
+    @EnvironmentObject private var store: TreeStore
     @State private var showingMap = false
-
-    init(environment: Environment) {
-        self.viewModel = TreeListViewModel(apiSession: environment.apiSession)
-    }
 
     var body: some View {
         NavigationView {
             Group {
                 if showingMap {
-                    TreeMapListView(
-                        viewModel: viewModel,
-                        isShowing: $showingMap
-                    )
-                    .navigationBarItems(trailing: listButton)
+                    TreeMapView()
+                        .navigationBarItems(trailing: listButton)
                 } else {
-                    TreeListView(viewModel: viewModel)
+                    TreeListView()
                         .navigationBarItems(trailing: mapButton)
                 }
             }
             .navigationBarTitle("Heritage Trees", displayMode: .inline)
         }
         .onAppear {
-            self.viewModel.getTrees()
+            store.getTrees()
         }
     }
 
@@ -45,6 +37,7 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView(environment: .local)
+        HomeView()
+            .environmentObject(TreeStore(apiService: Environment.local.apiService))
     }
 }

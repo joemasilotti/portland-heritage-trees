@@ -1,20 +1,21 @@
 import SwiftUI
 
 struct TreeListView: View {
-    @ObservedObject var viewModel: TreeListViewModel
+    @EnvironmentObject private var store: TreeStore
 
     var body: some View {
-        List(viewModel.treeViewModels.indices, id: \.self) { index in
-            NavigationLink(destination: TreeDetailView(viewModel: viewModel.treeViewModels[index])) {
-                TreeListItem(viewModel: viewModel.treeViewModels[index])
+        List(store.trees) { tree in
+            NavigationLink(destination: TreeDetailView(tree: tree)) {
+                TreeListItem(tree: tree)
             }
         }
         .listStyle(PlainListStyle())
     }
 }
 
- struct TreeListView_Previews: PreviewProvider {
+struct TreeListView_Previews: PreviewProvider {
     static var previews: some View {
-        TreeListView(viewModel: TreeListViewModel.preview)
+        TreeListView()
+            .environmentObject(Environment.local.store)
     }
- }
+}

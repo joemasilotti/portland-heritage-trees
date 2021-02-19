@@ -1,26 +1,22 @@
 import MapKit
 
 class TreeAnnotation: NSObject {
-    let viewModel: TreeViewModel
     let coordinate: CLLocationCoordinate2D
+    let tree: TreeViewModel
 
-    init?(viewModel: TreeViewModel) {
-        guard let coordinate = viewModel.coordinate else { return nil }
-
+    init?(tree: TreeViewModel) {
+        guard let coordinate = tree.coordinate else { return nil }
         self.coordinate = coordinate
-        self.viewModel = viewModel
+        self.tree = tree
     }
 }
 
 extension TreeAnnotation: MKAnnotation {
-    var title: String? { viewModel.uniqueName }
-    var subtitle: String? { viewModel.commonName }
+    var title: String? { tree.uniqueName }
+    var subtitle: String? { tree.commonName }
 }
 
 extension TreeAnnotation: Annotation {
-    var tintColor: UIColor {
-        viewModel.isVisited ? defaultColor.withAlphaComponent(0.5) : defaultColor
-    }
-
-    private var defaultColor: UIColor { UIColor(.accentColor) }
+    var identifier: String { tree.id }
+    var tintColor: UIColor { tree.tree.visited ? .green : .red }
 }

@@ -20,7 +20,6 @@ struct SolidButton_Previews: PreviewProvider {
     static var previews: some View {
         Button("Button title") {}
             .buttonStyle(SolidButton())
-            .previewLayout(PreviewLayout.sizeThatFits)
-            .padding()
+            .autosizedPreview()
     }
 }

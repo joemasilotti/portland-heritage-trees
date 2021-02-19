@@ -1,13 +1,13 @@
 import Combine
 
 protocol OpenDataService {
-    var apiSession: APIService { get }
+    var apiService: APIService { get }
     func getTrees() -> AnyPublisher<TreeListAPIResponse, APIError>
 }
 
 extension OpenDataService {
     func getTrees() -> AnyPublisher<TreeListAPIResponse, APIError> {
-        apiSession.request(with: OpenDataEndpoint.heritageTrees)
+        apiService.request(with: OpenDataEndpoint.heritageTrees)
             .eraseToAnyPublisher()
     }
 }

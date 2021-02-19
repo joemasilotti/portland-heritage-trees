@@ -2,32 +2,33 @@ import MapKit
 import SwiftUI
 
 struct TreeMapView: View {
-    let coordinate: CLLocationCoordinate2D
-    let viewModel: TreeViewModel
-
+    @EnvironmentObject private var store: TreeStore
+    @State private var isActive = false
+    @State private var selectedAnnotation: TreeAnnotation?
     private let locationManager = LocationManager()
 
     @State private var region = MKCoordinateRegion(
         center: CLLocationCoordinate2D.northWestNeighborhood,
-        span: MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005)
+        span: MKCoordinateSpan(latitudeDelta: 0.15, longitudeDelta: 0.15)
     )
 
     var body: some View {
-        Map(coordinateRegion: $region, interactionModes: .all, showsUserLocation: true, userTrackingMode: nil, annotationItems: [viewModel]) { _ in
-            MapPin(coordinate: coordinate, tint: .accentColor)
-        }
-        .ignoresSafeArea(.all)
-        .onAppear {
-            region.center = coordinate
-            locationManager.rerequestAuthorization()
-        }
-    }
-}
+        Group {
+            MapView(annotations: store.treeAnnotations) { annotation in
+                selectedAnnotation = annotation as? TreeAnnotation
+                isActive = true
+            }
+            .ignoresSafeArea(.all)
 
-struct TreeMapView_Previews: PreviewProvider {
-    static var previews: some View {
-        TreeMapView(coordinate: CLLocationCoordinate2D.northWestNeighborhood, viewModel: TreeViewModel.preview)
-            .previewLayout(PreviewLayout.sizeThatFits)
-            .padding()
+            if let tree = selectedAnnotation?.tree {
+                NavigationLink(destination: TreeDetailView(tree: tree), isActive: $isActive) {
+                    EmptyView()
+                }
+            }
+        }
+        .onAppear {
+            isActive = false
+            locationManager.requestAuthorization()
+        }
     }
 }
