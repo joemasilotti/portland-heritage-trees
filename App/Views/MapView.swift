@@ -24,7 +24,7 @@ public struct MapView: UIViewRepresentable {
     // TODO: Move to a different object.
     public func updateUIView(_ mapView: MKMapView, context: Context) {
         let existing = mapView.annotations.compactMap { $0 as? Annotation }.sorted(by: { $0.identifier < $1.identifier })
-        let diff = annotations.sorted(by: { $0.coordinate.latitude < $1.coordinate.latitude }).difference(from: existing) { $0 === $1 }
+        let diff = annotations.sorted(by: { $0.identifier < $1.identifier }).difference(from: existing) { $0 === $1 }
         for change in diff {
             switch change {
                 case .insert(_, let element, _): mapView.addAnnotation(element)

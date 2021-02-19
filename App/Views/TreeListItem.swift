@@ -1,15 +1,20 @@
 import SwiftUI
 
 struct TreeListItem: View {
-    @ObservedObject var tree: TreeViewModel
+    let tree: Tree
+
+    @EnvironmentObject private var store: TreeStore
+    private var viewModel: VisitableTreeViewModel {
+        VisitableTreeViewModel(tree: tree, isVisited: store.isVisited(tree: tree))
+    }
 
     var body: some View {
         HStack {
-            Text(tree.id)
-            Text(tree.commonName)
+            Text(String(viewModel.id))
+            Text(viewModel.commonName)
             Spacer()
 
-            if tree.isVisited {
+            if viewModel.isVisited {
                 Image(systemName: "checkmark.circle.fill")
                     .foregroundColor(.accentColor)
             }
@@ -18,19 +23,8 @@ struct TreeListItem: View {
 }
 
 struct TreeListItem_Previews: PreviewProvider {
-    static var visitedTreeViewModel: TreeViewModel {
-        let viewModel = TreeViewModel.preview
-        viewModel.isVisited = true
-        return viewModel
-    }
-
     static var previews: some View {
-        Group {
-            TreeListItem(tree: TreeViewModel.preview)
-                .autosizedPreview()
-
-            TreeListItem(tree: visitedTreeViewModel)
-                .autosizedPreview()
-        }
+        TreeListItem(tree: Tree.preview)
+            .autosizedPreview()
     }
 }

@@ -1,10 +1,10 @@
 import MapKit
 
-extension TreeViewModel {
+extension Tree {
     var coordinate: CLLocationCoordinate2D? {
         guard
-            let latitude = tree.latitude,
-            let longitude = tree.longitude
+            let latitude = latitude,
+            let longitude = longitude
         else { return nil }
 
         return CLLocationCoordinate2D(latitude: latitude, longitude: longitude)

@@ -5,7 +5,7 @@ struct TreeLocationRow: View {
     let viewModel: TreeViewModel
 
     var body: some View {
-        if let coordinate = viewModel.coordinate {
+        if let coordinate = viewModel.tree.coordinate {
             NavigationLink(destination: mapView(coordinate: coordinate)) {
                 content
             }

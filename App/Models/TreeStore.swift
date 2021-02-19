@@ -1,19 +1,22 @@
 import Combine
 
 class TreeStore: ObservableObject, OpenDataService {
+    @Published private(set) var treeAnnotations = [TreeAnnotation]()
     let apiService: APIService
-    @Published var trees = [TreeViewModel]()
 
-    private var cancellable: AnyCancellable?
-    private var cancellables = Set<AnyCancellable>()
-
-    public var treeAnnotations: [TreeAnnotation] {
-        trees.compactMap { TreeAnnotation(tree: $0) }
+    @Published private(set) var isVisitedStatuses: [Int: Bool] {
+        didSet { setTreeAnnotations() }
     }
+
+    @Published private(set) var trees = [Tree]() {
+        didSet { setTreeAnnotations() }
+    }
+
+    private var cancellables = Set<AnyCancellable>()
 
     init(apiService: APIService) {
         self.apiService = apiService
-        connect()
+        self.isVisitedStatuses = Persistence.isVisitedStatuses
     }
 
     func getTrees() {
@@ -27,15 +30,26 @@ class TreeStore: ObservableObject, OpenDataService {
                 }
             }) { result in
                 self.trees = result.features
-                    .map { TreeViewModel(tree: $0.tree) }
+                    .map { $0.tree }
             }
             .store(in: &cancellables)
     }
 
-    private func connect() {
-        let streams = trees.map { $0.objectWillChange }
-        cancellable = Publishers.MergeMany(streams).sink { [unowned self] _ in
-            self.objectWillChange.send()
+    func isVisited(tree: Tree) -> Bool {
+        isVisitedStatuses[tree.id] ?? false
+    }
+
+    func toggleTreeIsVisited(_ tree: Tree) {
+        var statuses = isVisitedStatuses
+        statuses[tree.id] = !(statuses[tree.id] ?? false)
+        isVisitedStatuses = statuses
+        Persistence.isVisitedStatuses = isVisitedStatuses
+    }
+
+    private func setTreeAnnotations() {
+        treeAnnotations = trees.compactMap { tree in
+            let isVisited = isVisitedStatuses[tree.id] ?? false
+            return TreeAnnotation(tree: tree, isVisited: isVisited)
         }
     }
 }

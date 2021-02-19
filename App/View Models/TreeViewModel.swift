@@ -1,19 +1,16 @@
 import Foundation
 
 class TreeViewModel: ObservableObject, Identifiable {
-    @Published var isVisited: Bool
     let tree: Tree
     var address: String? { tree.address }
     var commonName: String { tree.commonName }
     var height: String? { "\(tree.height) ft" }
-    var id: String { String(tree.id) }
+    var id: Int { tree.id }
     var neighborhood: String? { tree.neighborhood?.capitalized }
     var notes: String? { tree.notes }
     var scientificName: String { tree.scientificName }
     var treeFact: String? { tree.fact }
     var uniqueName: String { "Tree #\(id)" }
-    var visitedButtonImageName: String { isVisited ? "checkmark.circle.fill" : "checkmark.circle" }
-    var visitedButtonText: String { isVisited ? "Visited" : "Mark as visited" }
     var wikipediaURL: URL? { WikipediaURL.search(querying: commonName) }
 
     var circumference: String? {
@@ -33,13 +30,6 @@ class TreeViewModel: ObservableObject, Identifiable {
 
     init(tree: Tree) {
         self.tree = tree
-        self.isVisited = Persistence.isTreeVisited(tree)
-    }
-
-    func toggleVisited() {
-        let isVisited = !Persistence.isTreeVisited(tree)
-        Persistence.setTree(tree, visited: isVisited)
-        self.isVisited = isVisited
     }
 }
 

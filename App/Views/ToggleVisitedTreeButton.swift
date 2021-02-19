@@ -1,15 +1,20 @@
 import SwiftUI
 
 struct ToggleVisitedTreeButton: View {
-    @ObservedObject var tree: TreeViewModel
+    let tree: Tree
+
+    @EnvironmentObject private var store: TreeStore
+    private var viewModel: VisitableTreeViewModel {
+        VisitableTreeViewModel(tree: tree, isVisited: store.isVisited(tree: tree))
+    }
 
     var body: some View {
-        Button(action: { tree.toggleVisited() }) {
-            Image(systemName: tree.visitedButtonImageName)
+        Button(action: { store.toggleTreeIsVisited(viewModel.tree) }) {
+            Image(systemName: viewModel.visitedButtonImageName)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(height: 24)
-            Text(tree.visitedButtonText)
+            Text(viewModel.visitedButtonText)
                 .bold()
         }
         .buttonStyle(SolidButton())
@@ -18,7 +23,7 @@ struct ToggleVisitedTreeButton: View {
 
 struct ToggleVisitedTreeButton_Previews: PreviewProvider {
     static var previews: some View {
-        ToggleVisitedTreeButton(tree: TreeViewModel.preview)
+        ToggleVisitedTreeButton(tree: Tree.preview)
             .autosizedPreview()
     }
 }

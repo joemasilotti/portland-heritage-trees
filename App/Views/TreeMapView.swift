@@ -27,7 +27,6 @@ struct TreeMapView: View {
             }
         }
         .onAppear {
-            isActive = false
             locationManager.requestAuthorization()
         }
     }

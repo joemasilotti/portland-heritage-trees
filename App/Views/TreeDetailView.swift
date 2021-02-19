@@ -1,23 +1,28 @@
 import SwiftUI
 
 struct TreeDetailView: View {
-    @ObservedObject var tree: TreeViewModel
+    var tree: Tree
+
+    @EnvironmentObject private var store: TreeStore
+    private var viewModel: VisitableTreeViewModel {
+        VisitableTreeViewModel(tree: tree, isVisited: store.isVisited(tree: tree))
+    }
 
     var body: some View {
         ZStack {
             VStack {
-                MapView(tree: tree)
+                MapView(viewModel: viewModel)
 
                 List {
-                    NameView(url: tree.wikipediaURL, title: tree.commonName, subtitle: tree.scientificName)
+                    NameView(url: viewModel.wikipediaURL, title: tree.commonName, subtitle: tree.scientificName)
                         .padding(.vertical, 8)
-                    TreeLocationRow(viewModel: tree)
+                    TreeLocationRow(viewModel: viewModel)
                         .padding(.vertical, 8)
-                    TreeDimensionsView(height: tree.height, spread: tree.spread, diameter: tree.diameter, circumference: tree.circumference)
+                    TreeDimensionsView(height: viewModel.height, spread: viewModel.spread, diameter: viewModel.diameter, circumference: viewModel.circumference)
                         .padding(.vertical, 8)
-                    AttributeRow(name: "Notes", value: tree.notes)
+                    AttributeRow(name: "Notes", value: viewModel.notes)
                         .padding(.vertical, 8)
-                    AttributeRow(name: "Tree fact", value: tree.treeFact)
+                    AttributeRow(name: "Tree fact", value: viewModel.treeFact)
                         .padding(.vertical, 8)
                         .padding(.bottom, 64)
                 }
@@ -28,17 +33,17 @@ struct TreeDetailView: View {
                 ToggleVisitedTreeButton(tree: tree)
             }
         }
-        .navigationBarTitle(tree.uniqueName, displayMode: .inline)
+        .navigationBarTitle(viewModel.uniqueName, displayMode: .inline)
     }
 }
 
 extension TreeDetailView {
     struct MapView: View {
-        var tree: TreeViewModel
+        var viewModel: TreeViewModel
 
         var body: some View {
-            if let coordinate = tree.coordinate {
-                TreeMapDetailView(coordinate: coordinate, viewModel: tree)
+            if let coordinate = viewModel.tree.coordinate {
+                TreeMapDetailView(coordinate: coordinate, viewModel: viewModel)
                     .frame(height: 200)
             }
         }
@@ -47,6 +52,6 @@ extension TreeDetailView {
 
 struct TreeDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        TreeDetailView(tree: TreeViewModel.preview)
+        TreeDetailView(tree: Tree.preview)
     }
 }

@@ -1,6 +1,6 @@
 import MapKit
 
 public protocol Annotation: MKAnnotation {
-    var identifier: String { get }
+    var identifier: Int { get }
     var tintColor: UIColor { get }
 }
