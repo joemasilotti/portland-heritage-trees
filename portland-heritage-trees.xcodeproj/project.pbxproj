@@ -18,23 +18,11 @@
 		843B283D25BA71A600032BAA /* TreeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B283C25BA71A600032BAA /* TreeListView.swift */; };
 		843B284625BB1C5700032BAA /* ColorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B284525BB1C5700032BAA /* ColorHelper.swift */; };
 		8447ADDB25B54C630045D247 /* TreeMapDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447ADDA25B54C630045D247 /* TreeMapDetailView.swift */; };
-		8447ADDF25B557FC0045D247 /* TreeDimensionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447ADDE25B557FC0045D247 /* TreeDimensionsView.swift */; };
-		8447ADE525B560E80045D247 /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447ADE425B560E80045D247 /* SafariView.swift */; };
-		8447ADE825B561610045D247 /* NameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447ADE725B561610045D247 /* NameView.swift */; };
 		8447ADF125B5E4EC0045D247 /* TreeMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447ADF025B5E4EC0045D247 /* TreeMapView.swift */; };
-		8465656925E05E7800579061 /* MapView.Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8465656825E05E7800579061 /* MapView.Coordinator.swift */; };
-		8483BB0225DF6A1B00C7396C /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8483BB0025DF6A1B00C7396C /* MapView.swift */; };
-		8483BB1B25E00A8300C7396C /* AttributeRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8483BB1A25E00A8300C7396C /* AttributeRow.swift */; };
-		8483BB1F25E00BCA00C7396C /* DimensionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8483BB1E25E00BCA00C7396C /* DimensionView.swift */; };
-		8483BB2925E00CBF00C7396C /* DimensionGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8483BB2825E00CBF00C7396C /* DimensionGroup.swift */; };
-		8483BB2D25E0100000C7396C /* View+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8483BB2C25E0100000C7396C /* View+Preview.swift */; };
-		8483BB3125E0114800C7396C /* SafariButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8483BB3025E0114800C7396C /* SafariButton.swift */; };
-		8483BB3425E012EB00C7396C /* URL+Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8483BB3325E012EB00C7396C /* URL+Example.swift */; };
 		8483BB3825E0148700C7396C /* TreeLocationRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8483BB3725E0148700C7396C /* TreeLocationRow.swift */; };
 		8483BB3B25E014FE00C7396C /* ToggleVisitedTreeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8483BB3A25E014FE00C7396C /* ToggleVisitedTreeButton.swift */; };
 		8483BB5225E03E1A00C7396C /* VisitableTreeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8483BB5125E03E1A00C7396C /* VisitableTreeViewModel.swift */; };
 		8488FAF725E0472F00914310 /* Library in Frameworks */ = {isa = PBXBuildFile; productRef = 8488FAF625E0472F00914310 /* Library */; };
-		8495158325DB459D002E8DA0 /* PinAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8495158225DB459D002E8DA0 /* PinAnnotationView.swift */; };
 		84BDFBD225BB5E9E00AAB247 /* SolidButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BDFBD125BB5E9E00AAB247 /* SolidButton.swift */; };
 		84FAAE4B25E060C700AFE312 /* CLLocationCoordinate2DPortland.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FAAE4A25E060C700AFE312 /* CLLocationCoordinate2DPortland.swift */; };
 /* End PBXBuildFile section */
@@ -53,23 +41,11 @@
 		843B283C25BA71A600032BAA /* TreeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeListView.swift; sourceTree = "<group>"; };
 		843B284525BB1C5700032BAA /* ColorHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHelper.swift; sourceTree = "<group>"; };
 		8447ADDA25B54C630045D247 /* TreeMapDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeMapDetailView.swift; sourceTree = "<group>"; };
-		8447ADDE25B557FC0045D247 /* TreeDimensionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeDimensionsView.swift; sourceTree = "<group>"; };
-		8447ADE425B560E80045D247 /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
-		8447ADE725B561610045D247 /* NameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameView.swift; sourceTree = "<group>"; };
 		8447ADF025B5E4EC0045D247 /* TreeMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeMapView.swift; sourceTree = "<group>"; };
-		8465656825E05E7800579061 /* MapView.Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.Coordinator.swift; sourceTree = "<group>"; };
-		8483BB0025DF6A1B00C7396C /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
-		8483BB1A25E00A8300C7396C /* AttributeRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributeRow.swift; sourceTree = "<group>"; };
-		8483BB1E25E00BCA00C7396C /* DimensionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DimensionView.swift; sourceTree = "<group>"; };
-		8483BB2825E00CBF00C7396C /* DimensionGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DimensionGroup.swift; sourceTree = "<group>"; };
-		8483BB2C25E0100000C7396C /* View+Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Preview.swift"; sourceTree = "<group>"; };
-		8483BB3025E0114800C7396C /* SafariButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariButton.swift; sourceTree = "<group>"; };
-		8483BB3325E012EB00C7396C /* URL+Example.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Example.swift"; sourceTree = "<group>"; };
 		8483BB3725E0148700C7396C /* TreeLocationRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeLocationRow.swift; sourceTree = "<group>"; };
 		8483BB3A25E014FE00C7396C /* ToggleVisitedTreeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleVisitedTreeButton.swift; sourceTree = "<group>"; };
 		8483BB5125E03E1A00C7396C /* VisitableTreeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitableTreeViewModel.swift; sourceTree = "<group>"; };
 		8488FAF225E046DB00914310 /* Library */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Library; sourceTree = "<group>"; };
-		8495158225DB459D002E8DA0 /* PinAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinAnnotationView.swift; sourceTree = "<group>"; };
 		84BDFBD125BB5E9E00AAB247 /* SolidButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolidButton.swift; sourceTree = "<group>"; };
 		84FAAE4A25E060C700AFE312 /* CLLocationCoordinate2DPortland.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationCoordinate2DPortland.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -132,19 +108,9 @@
 			isa = PBXGroup;
 			children = (
 				841CB1FB25B4FF3D00D0B283 /* App.swift */,
-				8483BB1A25E00A8300C7396C /* AttributeRow.swift */,
-				8483BB2825E00CBF00C7396C /* DimensionGroup.swift */,
-				8483BB1E25E00BCA00C7396C /* DimensionView.swift */,
 				841CB21325B5054F00D0B283 /* HomeView.swift */,
-				8465656825E05E7800579061 /* MapView.Coordinator.swift */,
-				8483BB0025DF6A1B00C7396C /* MapView.swift */,
-				8447ADE725B561610045D247 /* NameView.swift */,
-				8495158225DB459D002E8DA0 /* PinAnnotationView.swift */,
-				8483BB3025E0114800C7396C /* SafariButton.swift */,
-				8447ADE425B560E80045D247 /* SafariView.swift */,
 				8483BB3A25E014FE00C7396C /* ToggleVisitedTreeButton.swift */,
 				841CB24925B51F8E00D0B283 /* TreeDetailView.swift */,
-				8447ADDE25B557FC0045D247 /* TreeDimensionsView.swift */,
 				841CB21825B5083E00D0B283 /* TreeListItem.swift */,
 				843B283C25BA71A600032BAA /* TreeListView.swift */,
 				8483BB3725E0148700C7396C /* TreeLocationRow.swift */,
@@ -175,8 +141,6 @@
 			isa = PBXGroup;
 			children = (
 				84FAAE4A25E060C700AFE312 /* CLLocationCoordinate2DPortland.swift */,
-				8483BB3325E012EB00C7396C /* URL+Example.swift */,
-				8483BB2C25E0100000C7396C /* View+Preview.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -285,30 +249,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8495158325DB459D002E8DA0 /* PinAnnotationView.swift in Sources */,
 				841CB24F25B5205500D0B283 /* TreeViewModel.swift in Sources */,
 				84BDFBD225BB5E9E00AAB247 /* SolidButton.swift in Sources */,
-				8483BB2D25E0100000C7396C /* View+Preview.swift in Sources */,
 				8483BB5225E03E1A00C7396C /* VisitableTreeViewModel.swift in Sources */,
-				8483BB1B25E00A8300C7396C /* AttributeRow.swift in Sources */,
 				8447ADDB25B54C630045D247 /* TreeMapDetailView.swift in Sources */,
-				8483BB0225DF6A1B00C7396C /* MapView.swift in Sources */,
-				8447ADDF25B557FC0045D247 /* TreeDimensionsView.swift in Sources */,
 				8447ADF125B5E4EC0045D247 /* TreeMapView.swift in Sources */,
 				843B284625BB1C5700032BAA /* ColorHelper.swift in Sources */,
 				84FAAE4B25E060C700AFE312 /* CLLocationCoordinate2DPortland.swift in Sources */,
-				8465656925E05E7800579061 /* MapView.Coordinator.swift in Sources */,
-				8483BB3125E0114800C7396C /* SafariButton.swift in Sources */,
-				8447ADE825B561610045D247 /* NameView.swift in Sources */,
 				841CB21425B5054F00D0B283 /* HomeView.swift in Sources */,
 				841CB21925B5083E00D0B283 /* TreeListItem.swift in Sources */,
-				8447ADE525B560E80045D247 /* SafariView.swift in Sources */,
-				8483BB1F25E00BCA00C7396C /* DimensionView.swift in Sources */,
 				8483BB3B25E014FE00C7396C /* ToggleVisitedTreeButton.swift in Sources */,
 				843B283D25BA71A600032BAA /* TreeListView.swift in Sources */,
 				841CB1FC25B4FF3D00D0B283 /* App.swift in Sources */,
-				8483BB2925E00CBF00C7396C /* DimensionGroup.swift in Sources */,
-				8483BB3425E012EB00C7396C /* URL+Example.swift in Sources */,
 				841CB24A25B51F8E00D0B283 /* TreeDetailView.swift in Sources */,
 				8483BB3825E0148700C7396C /* TreeLocationRow.swift in Sources */,
 			);

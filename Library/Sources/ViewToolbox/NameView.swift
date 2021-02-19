@@ -1,13 +1,19 @@
 import SwiftUI
+import Toolbox
 
-struct NameView: View {
-    let url: URL?
-    let title: String
-    let subtitle: String
-
+public struct NameView: View {
+    private let url: URL?
+    private let title: String
+    private let subtitle: String
     @State private var showingSafari = false
 
-    var body: some View {
+    public init(url: URL?, title: String, subtitle: String) {
+        self.url = url
+        self.title = title
+        self.subtitle = subtitle
+    }
+
+    public var body: some View {
         if let url = url {
             SafariButton(url: url) {
                 content
@@ -23,7 +29,7 @@ struct NameView: View {
                 .font(.title)
             Text(subtitle)
                 .font(.title3)
-                .foregroundColor(.mutedText)
+                .foregroundColor(Colors.secondaryText)
         }
     }
 }

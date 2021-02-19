@@ -8,7 +8,7 @@ public class TreeStore: ObservableObject, OpenDataService {
         didSet { setTreeAnnotations() }
     }
 
-    @Published internal private(set) var isVisitedStatuses: [Int: Bool] {
+    @Published private(set) var isVisitedStatuses: [Int: Bool] {
         didSet { setTreeAnnotations() }
     }
 

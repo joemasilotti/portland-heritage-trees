@@ -1,14 +1,19 @@
 import SwiftUI
 
-struct AttributeRow: View {
-    let name: String
-    let value: String?
+public struct AttributeRow: View {
+    private let name: String
+    private let value: String?
 
-    var body: some View {
+    public init(name: String, value: String?) {
+        self.name = name
+        self.value = value
+    }
+
+    public var body: some View {
         if let value = value {
             VStack(alignment: .leading) {
                 Text(name)
-                    .foregroundColor(.mutedText)
+                    .foregroundColor(Colors.secondaryText)
                     .font(.caption)
                 Text(value)
             }

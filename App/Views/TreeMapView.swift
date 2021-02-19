@@ -1,6 +1,7 @@
 import MapKit
 import Model
 import SwiftUI
+import ViewToolbox
 
 struct TreeMapView: View {
     @EnvironmentObject private var store: TreeStore

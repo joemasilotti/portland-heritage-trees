@@ -1,10 +1,14 @@
-import Model
 import SwiftUI
+import Toolbox
 
-struct DimensionGroup: View {
-    let dimensions: [Model.Dimension]
+public struct DimensionGroup: View {
+    private let dimensions: [Toolbox.Dimension]
 
-    var body: some View {
+    public init(dimensions: [Toolbox.Dimension]) {
+        self.dimensions = dimensions
+    }
+
+    public var body: some View {
         VStack(alignment: .leading, spacing: 16) {
             ForEach(dimensions, id: \.name) { dimension in
                 if let value = dimension.value {
@@ -18,9 +22,9 @@ struct DimensionGroup: View {
 struct DimensionGroup_Previews: PreviewProvider {
     static var previews: some View {
         DimensionGroup(dimensions: [
-            Model.Dimension(name: "Height", value: "205 ft"),
-            Model.Dimension(name: "Missing value", value: nil),
-            Model.Dimension(name: "Spread", value: "80 ft"),
+            Toolbox.Dimension(name: "Height", value: "205 ft"),
+            Toolbox.Dimension(name: "Missing value", value: nil),
+            Toolbox.Dimension(name: "Spread", value: "80 ft"),
         ])
             .autosizedPreview()
     }

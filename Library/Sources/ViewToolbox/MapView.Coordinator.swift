@@ -1,8 +1,8 @@
 import MapKit
-import Model
+import Toolbox
 
-public extension MapView {
-    class Coordinator: NSObject, MKMapViewDelegate {
+extension MapView {
+    public class Coordinator: NSObject, MKMapViewDelegate {
         var parent: MapView
 
         init(_ parent: MapView) {

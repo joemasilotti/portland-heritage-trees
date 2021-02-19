@@ -18,7 +18,7 @@ struct DimensionView: View {
                 Text(name)
                     .font(.caption)
                     .bold()
-                    .foregroundColor(.mutedText)
+                    .foregroundColor(Colors.secondaryText)
                 Text(value)
                     .font(.title2)
                     .bold()

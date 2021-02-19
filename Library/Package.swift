@@ -8,13 +8,21 @@ let package = Package(
     products: [
         .library(
             name: "Library",
-            targets: ["Model"]
+            targets: ["Model", "Toolbox", "ViewToolbox"]
         ),
     ],
     targets: [
         .target(
             name: "Model",
+            dependencies: ["Toolbox"]
+        ),
+        .target(
+            name: "Toolbox",
             dependencies: []
+        ),
+        .target(
+            name: "ViewToolbox",
+            dependencies: ["Toolbox"]
         ),
     ]
 )

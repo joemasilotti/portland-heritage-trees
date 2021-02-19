@@ -1,5 +1,6 @@
 import Model
 import SwiftUI
+import ViewToolbox
 
 struct TreeDetailView: View {
     let tree: Tree
@@ -19,7 +20,7 @@ struct TreeDetailView: View {
                         .padding(.vertical, 8)
                     TreeLocationRow(tree: tree)
                         .padding(.vertical, 8)
-                    TreeDimensionsView(height: viewModel.height, spread: viewModel.spread, diameter: viewModel.diameter, circumference: viewModel.circumference)
+                    DimensionsView(height: viewModel.height, spread: viewModel.spread, diameter: viewModel.diameter, circumference: viewModel.circumference)
                         .padding(.vertical, 8)
                     AttributeRow(name: "Notes", value: viewModel.notes)
                         .padding(.vertical, 8)
@@ -28,7 +29,7 @@ struct TreeDetailView: View {
                         .padding(.bottom, 64)
                 }
             }
-            
+
             VStack {
                 Spacer()
                 ToggleVisitedTreeButton(tree: tree)

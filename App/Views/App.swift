@@ -1,5 +1,6 @@
 import Model
 import SwiftUI
+import ViewToolbox
 
 @main
 struct Portland_Heritage_TreesApp: App {
@@ -9,6 +10,7 @@ struct Portland_Heritage_TreesApp: App {
         WindowGroup {
             HomeView()
                 .environmentObject(environment.store)
+                .onAppear() { Colors.secondaryText = .mutedText }
         }
     }
 }

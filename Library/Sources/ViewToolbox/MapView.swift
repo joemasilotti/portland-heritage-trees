@@ -1,6 +1,6 @@
 import MapKit
-import Model
 import SwiftUI
+import Toolbox
 
 let AnnotationViewIdentifier = "Annotation View"
 
