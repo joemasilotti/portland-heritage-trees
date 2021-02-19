@@ -147,8 +147,8 @@
 		841CB1FA25B4FF3D00D0B283 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				8483BB0B25DF6D9600C7396C /* Extensions */,
 				843B284825BB1C7100032BAA /* Appearance */,
+				8483BB0B25DF6D9600C7396C /* Extensions */,
 				841CB23725B50ADB00D0B283 /* Models */,
 				841CB20125B4FF3E00D0B283 /* Preview Content */,
 				8483BB0525DF6A4100C7396C /* Protocols */,
