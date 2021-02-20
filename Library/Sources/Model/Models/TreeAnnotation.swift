@@ -1,5 +1,4 @@
 import MapKit
-import SwiftUI
 import Toolbox
 
 public class TreeAnnotation: NSObject {
@@ -22,7 +21,5 @@ extension TreeAnnotation: MKAnnotation {
 
 extension TreeAnnotation: Annotation {
     public var identifier: Int { tree.id }
-    public var tintColor: UIColor { isVisited ? color.withAlphaComponent(0.5) : color }
-
-    private var color: UIColor { UIColor(Color.accentColor) }
+    public var isMuted: Bool { isVisited }
 }

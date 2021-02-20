@@ -10,7 +10,7 @@ struct Portland_Heritage_TreesApp: App {
         WindowGroup {
             HomeView()
                 .environmentObject(environment.store)
-                .onAppear() { Colors.secondaryText = .mutedText }
+                .onAppear { Colors.apply(ColorsConfig()) }
         }
     }
 }

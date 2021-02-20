@@ -22,7 +22,8 @@ extension MapView {
                 let annotation = annotation as? Annotation
             else { return nil }
 
-            annotationView.pinTintColor = annotation.tintColor
+            let alphaComponent: CGFloat = annotation.isMuted ? 0.5 : 1
+            annotationView.pinTintColor = UIColor(Colors.pinTintColor).withAlphaComponent(alphaComponent)
             return annotationView
         }
     }
