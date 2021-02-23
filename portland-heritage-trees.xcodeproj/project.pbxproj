@@ -26,6 +26,7 @@
 		84BDFBD225BB5E9E00AAB247 /* SolidButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BDFBD125BB5E9E00AAB247 /* SolidButton.swift */; };
 		84FAAE4B25E060C700AFE312 /* CLLocationCoordinate2DPortland.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FAAE4A25E060C700AFE312 /* CLLocationCoordinate2DPortland.swift */; };
 		84FAAE6125E089A500AFE312 /* ColorsConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FAAE6025E089A500AFE312 /* ColorsConfig.swift */; };
+		84FAAE6425E1A17100AFE312 /* VisitedTreesProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FAAE6325E1A17100AFE312 /* VisitedTreesProgressView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		84BDFBD125BB5E9E00AAB247 /* SolidButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolidButton.swift; sourceTree = "<group>"; };
 		84FAAE4A25E060C700AFE312 /* CLLocationCoordinate2DPortland.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationCoordinate2DPortland.swift; sourceTree = "<group>"; };
 		84FAAE6025E089A500AFE312 /* ColorsConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsConfig.swift; sourceTree = "<group>"; };
+		84FAAE6325E1A17100AFE312 /* VisitedTreesProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitedTreesProgressView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 				8483BB3725E0148700C7396C /* TreeLocationRow.swift */,
 				8447ADDA25B54C630045D247 /* TreeMapDetailView.swift */,
 				8447ADF025B5E4EC0045D247 /* TreeMapView.swift */,
+				84FAAE6325E1A17100AFE312 /* VisitedTreesProgressView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 				8483BB3B25E014FE00C7396C /* ToggleVisitedTreeButton.swift in Sources */,
 				843B283D25BA71A600032BAA /* TreeListView.swift in Sources */,
 				841CB1FC25B4FF3D00D0B283 /* App.swift in Sources */,
+				84FAAE6425E1A17100AFE312 /* VisitedTreesProgressView.swift in Sources */,
 				841CB24A25B51F8E00D0B283 /* TreeDetailView.swift in Sources */,
 				84FAAE6125E089A500AFE312 /* ColorsConfig.swift in Sources */,
 				8483BB3825E0148700C7396C /* TreeLocationRow.swift in Sources */,

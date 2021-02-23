@@ -1,18 +1,15 @@
 import Combine
 
 public class TreeStore: ObservableObject, OpenDataService {
+    // MARK: Public
+
+    public var treeCount: Int { trees.count }
+    public var visitedTreeCount: Int { isVisitedStatuses.filter { $1 }.count }
     @Published public private(set) var treeAnnotations = [TreeAnnotation]()
-    let apiService: APIService
 
     @Published public private(set) var trees = [Tree]() {
         didSet { setTreeAnnotations() }
     }
-
-    @Published private(set) var isVisitedStatuses: [Int: Bool] {
-        didSet { setTreeAnnotations() }
-    }
-
-    private var cancellables = Set<AnyCancellable>()
 
     public init(apiService: APIService) {
         self.apiService = apiService
@@ -30,6 +27,18 @@ public class TreeStore: ObservableObject, OpenDataService {
         isVisitedStatuses = statuses
         Persistence.isVisitedStatuses = isVisitedStatuses
     }
+
+    // MARK: Internal
+
+    let apiService: APIService
+
+    // MARK: Private
+
+    @Published private(set) var isVisitedStatuses: [Int: Bool] {
+        didSet { setTreeAnnotations() }
+    }
+
+    private var cancellables = Set<AnyCancellable>()
 
     private func getTrees() {
         getTrees()
