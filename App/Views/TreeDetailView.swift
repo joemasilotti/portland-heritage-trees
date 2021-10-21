@@ -28,6 +28,7 @@ struct TreeDetailView: View {
                         .padding(.vertical, 8)
                         .padding(.bottom, 64)
                 }
+                .listStyle(.plain)
             }
 
             VStack {

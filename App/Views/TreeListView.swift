@@ -15,7 +15,7 @@ struct TreeListView: View {
                 }
             }
         }
-        .listStyle(PlainListStyle())
+        .listStyle(.plain)
     }
 }
 
