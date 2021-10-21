@@ -34,3 +34,6 @@ xcuserdata
 fastlane/test_output/
 /*.cer
 /*.mobileprovision
+
+# Other
+todo.md
